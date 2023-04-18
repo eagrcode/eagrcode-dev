@@ -19,6 +19,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <h1 className={`${myFont.className} ${styles.h1}`}>eagrcode</h1>
+        <p>portfolio</p>
         {/* <Image src={skeleton} alt="skeleton-meme" /> */}
       </main>
     </>
