@@ -1,10 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import styles from "@/styles/Home.module.scss";
 import skeleton from "@/assets/skeleton-eagr.png";
 
 const inter = Inter({ subsets: ["latin"] });
+const myFont = localFont({ src: "../assets/my-font.ttf", fallback: ["sans-serif"] });
 
 export default function Home() {
   return (
@@ -16,7 +18,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Image src={skeleton} alt="skeleton-meme" />
+        <h1 className={`${myFont.className} ${styles.h1}`}>eagrcode</h1>
+        {/* <Image src={skeleton} alt="skeleton-meme" /> */}
       </main>
     </>
   );
