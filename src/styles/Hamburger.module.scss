@@ -1,0 +1,51 @@
+.button {
+  background-color: transparent;
+  border: transparent;
+  display: block;
+
+  @media (min-width: 900px) {
+    display: none;
+  }
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  gap: 10px;
+  opacity: 0.7;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+
+    .bar:nth-of-type(2) {
+      width: 100%;
+    }
+  }
+
+  &.active {
+    .bar:nth-child(1) {
+      width: 80%;
+      transform: translateY(5px) translateX(4px) rotate(45deg);
+    }
+
+    .bar:nth-child(2) {
+      width: 80%;
+      transform: translateY(-5px) translateX(-4px) rotate(-45deg);
+    }
+  }
+}
+
+.bar {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  transition: all 0.2s ease-out;
+}
+
+.bar:nth-of-type(2) {
+  width: 70%;
+  align-self: flex-end;
+}
