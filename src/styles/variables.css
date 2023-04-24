@@ -3,9 +3,11 @@
   --sidebar-width: 163.4px;
 
   /* colors */
-  --accent-color: #3dd6f5;
+  /* --accent-color: hsl(190, 90%, 60%); */
+  /* --accent-color: hsl(300, 95%, 70%); */
+  --accent-color: hsl(50, 50%, 80%);
   /* dark theme */
-  --background-color-dark: #121730;
-  --text-color-dark: hsla(240, 20%, 75%);
-  --nav-background-color-dark: #120e25;
+  --background-color-dark: hsl(230, 50%, 13%);
+  --text-color-dark: hsl(240, 20%, 75%);
+  --nav-background-color-dark: hsl(250, 50%, 8%);
 }
