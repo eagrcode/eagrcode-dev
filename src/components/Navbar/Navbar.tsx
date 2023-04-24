@@ -55,12 +55,6 @@ export default function Navbar() {
               <FontAwesomeIcon className={styles.icon} icon={faLinkedin} />
             </Link>
           </li>
-
-          <li>
-            <Link href="">
-              <FontAwesomeIcon className={styles.icon} icon={faInstagram} />
-            </Link>
-          </li>
         </ul>
         <div className={styles.line}></div>
       </div>

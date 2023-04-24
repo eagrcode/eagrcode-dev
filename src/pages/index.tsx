@@ -1,9 +1,17 @@
+// next
 import Head from "next/head";
-import Image from "next/image";
+import type { NextPage } from "next";
+
+// next font
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
+
+// styles
 import styles from "@/styles/Home.module.scss";
-import Link from "next/link";
+
+// components
+import ResumeBtn from "@/components/buttons/ResumeBtn/ResumeBtn";
+import Hero from "@/components/Hero/Hero";
 
 const inter = Inter({ subsets: ["latin"] });
 const myFont = localFont({ src: "../assets/my-font.ttf", fallback: ["sans-serif"] });
@@ -18,9 +26,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className={styles.section}>
-        <h1 className={`${myFont.className} ${styles.h1}`}>eagrcode</h1>
-        <p>portfolio</p>
+        <Hero />
+        <ResumeBtn />
       </section>
+      <section className={styles.section}>About</section>
+      <section className={styles.section}>Projects</section>
+      <section className={styles.section}>Contact</section>
     </>
   );
 }
