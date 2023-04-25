@@ -5,9 +5,9 @@
   /* colors */
   /* --accent-color: hsl(190, 90%, 60%); */
   /* --accent-color: hsl(300, 95%, 70%); */
-  --accent-color: hsl(50, 50%, 80%);
+  --accent-color: hsl(50, 70%, 80%);
   /* dark theme */
   --background-color-dark: hsl(230, 50%, 13%);
-  --text-color-dark: hsl(240, 20%, 75%);
+  --text-color-dark: hsl(240, 20%, 70%);
   --nav-background-color-dark: hsl(250, 50%, 8%);
 }

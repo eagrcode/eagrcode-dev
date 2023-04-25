@@ -7,17 +7,44 @@ import Hamburger from "./Hamburger";
 // next
 import Link from "next/link";
 
+// react
+import { useState } from "react";
+
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function Navbar() {
+  // initial state
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScroll, setIsScroll] = useState(false);
+
+  // tet bg blur on scroll
+  function handleScroll() {
+    if (window.scrollY >= 64) {
+      setIsScroll(true);
+    } else {
+      setIsScroll(false);
+    }
+  }
+
+  // check for window to allow client side to execute
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", handleScroll);
+  }
+
+  // disable body scroll if mobile menu open
+  if (typeof document !== "undefined" && isOpen) {
+    document.body.style.overflow = "hidden";
+  }
+
   return (
-    <aside className={styles.sidebar}>
+    <aside className={isScroll ? `${styles.scroll} ${styles.sidebar}` : styles.sidebar}>
       <Link className={styles.logo} href="/">
-        eagrcode
+        {"<eagrcode />"}
       </Link>
-      <div className={styles.sidebarBtm}>
+      <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
+      <div className={isOpen ? `${styles.sidebarBtm} ${styles.isOpen}` : styles.sidebarBtm}>
         <nav className={styles.nav}>
           <ul className={styles.menu}>
             <li className={styles.item}>
@@ -41,12 +68,12 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-          <Hamburger />
         </nav>
         <ul className={styles.socialMenu}>
           <li>
             <Link href="">
               <FontAwesomeIcon className={styles.icon} icon={faGithub} />
+              <span className={styles.tooltip}>GitHub</span>
             </Link>
           </li>
 
