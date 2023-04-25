@@ -8,7 +8,10 @@ import Hamburger from "./Hamburger";
 import Link from "next/link";
 
 // react
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
+
+// context
+import { useContextProvider } from "@/context/ContextProvider";
 
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,7 +19,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function Navbar() {
   // initial state
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, setIsOpen } = useContextProvider();
   const [isScroll, setIsScroll] = useState(false);
 
   // tet bg blur on scroll

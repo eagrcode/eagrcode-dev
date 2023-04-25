@@ -13,10 +13,16 @@ import styles from "@/styles/Home.module.scss";
 import ResumeBtn from "@/components/buttons/ResumeBtn/ResumeBtn";
 import Hero from "@/components/Hero/Hero";
 
+// context
+import { useContextProvider } from "@/context/ContextProvider";
+
 const inter = Inter({ subsets: ["latin"] });
 const myFont = localFont({ src: "../assets/my-font.ttf", fallback: ["sans-serif"] });
 
 export default function Home() {
+  // initial state
+  const { isOpen } = useContextProvider();
+
   return (
     <>
       <Head>
@@ -25,7 +31,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className={styles.section}>
+      <section className={isOpen ? `${styles.section} ${styles.isOpen}` : styles.section}>
         <Hero />
         <ResumeBtn />
       </section>
