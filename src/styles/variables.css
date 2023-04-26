@@ -4,10 +4,10 @@
 
   /* colors */
   /* --accent-color: hsl(190, 90%, 60%); */
-  /* --accent-color: hsl(300, 95%, 70%); */
-  --accent-color: hsl(50, 70%, 80%);
+  --accent-color: hsl(300, 80%, 70%);
+  /* --accent-color: hsl(50, 70%, 80%); */
   /* dark theme */
-  --background-color-dark: hsl(230, 50%, 12%);
-  --text-color-dark: hsl(240, 20%, 70%);
+  --background-color-dark: hsla(230, 50%, 12%);
+  --text-color-dark: hsl(240, 15%, 60%);
   --nav-background-color-dark: hsl(250, 50%, 7%);
 }

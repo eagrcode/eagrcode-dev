@@ -5,11 +5,10 @@
   align-items: center;
   height: calc(100svh - var(--nav-height));
   color: var(--text-color-dark);
-
   transition: all 0.2s ease-in-out;
 
   &.isOpen {
-    filter: blur(10px);
+    filter: blur(8px);
   }
 
   @media (min-width: 900px) {

@@ -8,7 +8,7 @@ import Hamburger from "./Hamburger";
 import Link from "next/link";
 
 // react
-import { Dispatch, SetStateAction, useState } from "react";
+import { useState } from "react";
 
 // context
 import { useContextProvider } from "@/context/ContextProvider";
@@ -37,7 +37,7 @@ export default function Navbar() {
   }
 
   return (
-    <aside className={isScroll ? `${styles.scroll} ${styles.sidebar}` : styles.sidebar}>
+    <aside className={isScroll ? `${styles.sidebar} ${styles.scroll}` : styles.sidebar}>
       <Link className={styles.logo} href="/">
         {"<eagrcode />"}
       </Link>

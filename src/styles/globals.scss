@@ -7,12 +7,10 @@
 }
 
 html {
-  letter-spacing: 0.6px;
+  letter-spacing: 0.8px;
 }
 
 body {
-  overflow: visible;
-
   &.noScroll {
     overflow: hidden;
   }

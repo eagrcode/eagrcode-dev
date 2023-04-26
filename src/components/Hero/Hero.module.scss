@@ -14,7 +14,6 @@
     position: absolute;
     border-top: 1px solid var(--text-color-dark);
     border-left: 1px solid var(--text-color-dark);
-
     width: var(--before-elements-size);
     height: var(--before-elements-size);
     top: 0;
@@ -26,11 +25,15 @@
     position: absolute;
     border-bottom: 1px solid var(--text-color-dark);
     border-right: 1px solid var(--text-color-dark);
-
     width: var(--before-elements-size);
     height: var(--before-elements-size);
     bottom: 0;
     right: 0;
+  }
+
+  &.isOpen::before,
+  &.isOpen::after {
+    visibility: hidden;
   }
 }
 
