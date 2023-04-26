@@ -11,7 +11,11 @@ html {
 }
 
 body {
-  overflow-x: hidden;
+  overflow: visible;
+
+  &.noScroll {
+    overflow: hidden;
+  }
 }
 
 a {

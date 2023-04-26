@@ -8,8 +8,6 @@
   height: var(--nav-height);
   padding: 0 1rem;
   z-index: 999;
-
-  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 
   &.scroll {

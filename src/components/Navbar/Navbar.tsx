@@ -36,11 +36,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
   }
 
-  // disable body scroll if mobile menu open
-  if (typeof document !== "undefined" && isOpen) {
-    document.body.style.overflow = "hidden";
-  }
-
   return (
     <aside className={isScroll ? `${styles.scroll} ${styles.sidebar}` : styles.sidebar}>
       <Link className={styles.logo} href="/">

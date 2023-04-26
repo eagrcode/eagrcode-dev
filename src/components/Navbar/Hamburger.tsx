@@ -1,6 +1,6 @@
 // styles
 import styles from "@/styles/Hamburger.module.scss";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useEffect } from "react";
 
 // set component prop types
 type props = {
@@ -11,9 +11,16 @@ type props = {
 export default function Hamburger({ isOpen, setIsOpen }: props) {
   // toggle nav menu
   function handleClick() {
-    document.body.style.overflow = "" ? "visible" : "";
     setIsOpen(!isOpen);
   }
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.className = "noScroll";
+    } else {
+      document.body.className = "";
+    }
+  }, [isOpen]);
 
   return (
     <button className={styles.button} onClick={handleClick}>
