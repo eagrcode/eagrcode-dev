@@ -2,7 +2,7 @@
 import Navbar from "@/components/Navbar/Navbar";
 
 // styles
-import styles from "@/styles/NavLayout.module.scss";
+import styles from "./NavLayout.module.scss";
 
 export default function NavLayout({ children }: { children: React.ReactNode }) {
   return (

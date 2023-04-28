@@ -1,8 +1,9 @@
 // styles
-import styles from "@/styles/Navbar.module.scss";
+import styles from "./Navbar.module.scss";
 
 // components
 import Hamburger from "./Hamburger";
+import ResumeBtn from "../buttons/ResumeBtn/ResumeBtn";
 
 // next
 import Link from "next/link";
@@ -22,19 +23,19 @@ export default function Navbar() {
   const { isOpen, setIsOpen } = useContextProvider();
   const [isScroll, setIsScroll] = useState(false);
 
-  // tet bg blur on scroll
-  function handleScroll() {
-    if (window.scrollY >= 64) {
-      setIsScroll(true);
-    } else {
-      setIsScroll(false);
-    }
-  }
+  // set bg blur on scroll
+  // function handleScroll() {
+  //   if (window.scrollY >= 64) {
+  //     setIsScroll(true);
+  //   } else {
+  //     setIsScroll(false);
+  //   }
+  // }
 
   // check for window to allow client side to execute
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", handleScroll);
-  }
+  // if (typeof window !== "undefined") {
+  //   window.addEventListener("scroll", handleScroll);
+  // }
 
   return (
     <aside className={isScroll ? `${styles.sidebar} ${styles.scroll}` : styles.sidebar}>
@@ -67,6 +68,7 @@ export default function Navbar() {
             </li>
           </ul>
         </nav>
+        <ResumeBtn />
         <ul className={styles.socialMenu}>
           <li>
             <Link href="">

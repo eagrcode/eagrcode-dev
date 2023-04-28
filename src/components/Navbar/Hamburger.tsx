@@ -1,8 +1,8 @@
 // styles
-import styles from "@/styles/Hamburger.module.scss";
+import styles from "./Hamburger.module.scss";
 import { Dispatch, SetStateAction, useEffect } from "react";
 
-// set component prop types
+// set prop types
 type props = {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
@@ -14,6 +14,7 @@ export default function Hamburger({ isOpen, setIsOpen }: props) {
     setIsOpen(!isOpen);
   }
 
+  // disable body scroll when isOpen
   useEffect(() => {
     if (isOpen) {
       document.body.className = "noScroll";
