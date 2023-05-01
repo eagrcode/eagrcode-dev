@@ -3,11 +3,13 @@
   --sidebar-width: 163.4px;
 
   /* colors */
-  /* --accent-color: hsl(190, 90%, 60%); */
-  /* --accent-color: hsl(300, 80%, 70%); */
-  --accent-color: hsl(50, 60%, 80%);
+
+  --accent-color: hsl(190, 100%, 70%);
+  /* --accent-color: hsl(300, 100%, 80%); */
+  /* --accent-color: hsl(50, 60%, 80%); */
+
   /* dark theme */
-  --background-color-dark: hsla(230, 50%, 12%);
+  --background-color-dark: hsl(230, 50%, 12%);
   --text-color-dark: hsl(240, 15%, 60%);
   --header-color-dark: hsl(240, 20%, 85%);
   --nav-background-color-dark: hsl(250, 50%, 7%);

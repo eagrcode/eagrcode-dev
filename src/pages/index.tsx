@@ -11,6 +11,7 @@ import styles from "@/styles/Home.module.scss";
 // components
 import HeroBtn from "@/components/buttons/HeroBtn/HeroBtn";
 import Hero from "@/components/Hero/Hero";
+import ProjectCard from "@/components/ProjectCard/ProjectCard";
 
 // context
 import { useContextProvider } from "@/context/ContextProvider";
@@ -26,6 +27,10 @@ import {
   faSass,
 } from "@fortawesome/free-brands-svg-icons";
 
+// images
+import supatask from "@/assets/images/supatask-thumbnail.png";
+import emdb from "@/assets/images/emdb-thumbnail.png";
+
 const inter = Inter({ subsets: ["latin"] });
 const myFont = localFont({ src: "../assets/my-font.ttf", fallback: ["sans-serif"] });
 
@@ -36,7 +41,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>eagrcode</title>
+        <title>Eagrcode</title>
         <meta name="description" content="Portfolio of Web Developer Elliot Robinson" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -69,13 +74,39 @@ export default function Home() {
         </div>
       </section>
       <section id="projects" className={styles.section}>
-        <h2>Projects</h2>
-        <ul>
-          <li>Project 1</li>
-          <li>Project 2</li>
-          <li>Project 3</li>
-          <li>Project 4</li>
-        </ul>
+        <div className={styles.projectsWrapper}>
+          <h2>Projects</h2>
+          <div className={styles.projectGrid}>
+            <ProjectCard
+              title={"Supatask"}
+              image={supatask}
+              text={
+                "A full-stack web app featuring user authentication, developed with React and Supabase."
+              }
+            />
+            <ProjectCard
+              title={"EMDB"}
+              image={emdb}
+              text={
+                "A full-stack web app featuring user authentication, developed with React and Supabase."
+              }
+            />
+            <ProjectCard
+              title={"MoonGazer Ceremonies"}
+              image={supatask}
+              text={
+                "A full-stack web app featuring user authentication, developed with React and Supabase."
+              }
+            />
+            <ProjectCard
+              title={"Eagrcode"}
+              image={supatask}
+              text={
+                "A full-stack web app featuring user authentication, developed with React and Supabase."
+              }
+            />
+          </div>
+        </div>
       </section>
       <section className={styles.section}>
         <h2>Contact Me</h2>
