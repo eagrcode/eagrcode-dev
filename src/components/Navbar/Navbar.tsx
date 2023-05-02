@@ -26,7 +26,8 @@ export default function Navbar() {
   return (
     <aside className={styles.sidebar}>
       <Link className={styles.logo} href="/">
-        {"<eagrcode />"}
+        {"<eagrcode"}
+        <span style={{ marginLeft: "8px" }}>{"/>"}</span>
       </Link>
       <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className={isOpen ? `${styles.sidebarBtm} ${styles.isOpen}` : styles.sidebarBtm}>
@@ -64,7 +65,6 @@ export default function Navbar() {
             </Link>
           </li>
         </ul>
-        <div className={styles.line}></div>
       </div>
     </aside>
   );

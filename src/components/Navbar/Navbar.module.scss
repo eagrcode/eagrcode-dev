@@ -12,10 +12,14 @@
   backdrop-filter: blur(10px);
 
   @media (min-width: 900px) {
+    position: sticky;
+    flex-direction: column;
     left: 0;
     height: 100vh;
-    width: var(--sidebar-width);
-    // padding: 2rem 2rem 0 2rem;
+    width: fit-content;
+    // width: var(--sidebar-width);
+    // padding: 1rem;
+    padding: 0;
     background-color: var(--nav-background-color-dark);
     border-right: solid 1px rgba(120, 120, 120, 0.2);
   }
@@ -31,7 +35,7 @@
   }
 
   @media (min-width: 900px) {
-    font-size: 1.6rem;
+    display: flex;
     padding: 1rem;
   }
 }
@@ -59,7 +63,9 @@
   }
 
   @media (min-width: 900px) {
-    display: flex;
+    position: relative;
+    width: 100%;
+    transform: translate(0);
   }
 }
 

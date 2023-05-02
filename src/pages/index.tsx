@@ -48,46 +48,50 @@ export default function Home() {
       <section id="scroll-to-about" className={styles.aboutSection}>
         <div className={styles.about}>
           <h2>About Me</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ex impedit deserunt, eius
-            esse fugiat itaque sed sunt quidem consequatur debitis laudantium, repellendus accusamus
-            reprehenderit ducimus provident ut corrupti architecto?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ex impedit deserunt, eius
-            esse fugiat itaque sed sunt quidem consequatur debitis laudantium, repellendus accusamus
-            reprehenderit ducimus provident ut corrupti architecto?
-          </p>
-          <div className={styles.techGrid}>
-            <FontAwesomeIcon className={styles.gridItem} icon={faReact} />
-            <FontAwesomeIcon className={styles.gridItem} icon={faSass} />
-            <FontAwesomeIcon className={styles.gridItem} icon={faNodeJs} />
-            <FontAwesomeIcon className={styles.gridItem} icon={faCss3} />
-            <FontAwesomeIcon className={styles.gridItem} icon={faHtml5} />
-            <FontAwesomeIcon className={styles.gridItem} icon={faAws} />
+          <div className={styles.aboutBtm}>
+            <div className={styles.aboutText}>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ex impedit deserunt,
+                eius esse fugiat itaque sed sunt quidem consequatur debitis laudantium, repellendus
+                accusamus reprehenderit ducimus provident ut corrupti architecto?
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ex impedit deserunt,
+                eius esse fugiat itaque sed sunt quidem consequatur debitis laudantium, repellendus
+                accusamus reprehenderit ducimus provident ut corrupti architecto?
+              </p>
+            </div>
+            <div className={styles.techGrid}>
+              <FontAwesomeIcon className={styles.gridItem} icon={faReact} />
+              <FontAwesomeIcon className={styles.gridItem} icon={faSass} />
+              <FontAwesomeIcon className={styles.gridItem} icon={faNodeJs} />
+              <FontAwesomeIcon className={styles.gridItem} icon={faCss3} />
+              <FontAwesomeIcon className={styles.gridItem} icon={faHtml5} />
+              <FontAwesomeIcon className={styles.gridItem} icon={faAws} />
+            </div>
           </div>
         </div>
       </section>
-      <section id="scroll-to-projects" className={styles.section}>
+      <section id="scroll-to-projects" className={styles.projectsSection}>
         <div className={styles.projectsWrapper}>
           <h2>Projects</h2>
           <div className={styles.projectGrid}>
-            <ProjectCard
-              title={"Supatask"}
-              image={supatask}
-              alt={"supatask-project-thumbnail"}
-              liveUrl={"https://supatask.vercel.app"}
-              gitHubUrl={"https://github.com/eagrcode/supatask"}
-              text={
-                "A full-stack web app featuring user authentication, developed with React and Supabase."
-              }
-            />
             <ProjectCard
               title={"EMDB"}
               image={emdb}
               alt={"emdb-project-thumbnail"}
               gitHubUrl={"https://github.com/eagrcode/EMDB"}
               liveUrl={"https://emdb-eagrcode.netlify.app"}
+              text={
+                "A full-stack web app featuring user authentication, developed with React and Supabase."
+              }
+            />
+            <ProjectCard
+              title={"Supatask"}
+              image={supatask}
+              alt={"supatask-project-thumbnail"}
+              liveUrl={"https://supatask.vercel.app"}
+              gitHubUrl={"https://github.com/eagrcode/supatask"}
               text={
                 "A full-stack web app featuring user authentication, developed with React and Supabase."
               }

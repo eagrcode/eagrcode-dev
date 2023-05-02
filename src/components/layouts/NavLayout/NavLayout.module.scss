@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: column;
   overflow: clip;
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+  }
 }
 
 .main {
@@ -11,4 +15,8 @@
   width: 100%;
   padding: 0 1rem;
   background-color: var(--background-color-dark);
+
+  @media (min-width: 900px) {
+    padding: 0 3rem;
+  }
 }
