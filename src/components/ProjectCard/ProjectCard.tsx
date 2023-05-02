@@ -16,19 +16,21 @@ type props = {
   image: StaticImageData;
   text: string;
   alt: string;
+  gitHubUrl: string;
+  liveUrl: string;
 };
 
-export default function ProjectCard({ title, image, text, alt }: props) {
+export default function ProjectCard({ title, image, text, alt, gitHubUrl, liveUrl }: props) {
   return (
     <div className={styles.project}>
       <h3>{title}</h3>
       <Image src={image} alt={alt} style={{ height: "auto", width: "100%" }} placeholder="blur" />
       <p>{text}</p>
       <div className={styles.iconContainer}>
-        <Link href="">
+        <Link href={gitHubUrl} target="_blank">
           <FontAwesomeIcon className={styles.icon} icon={faGithub} />
         </Link>
-        <Link href="">
+        <Link href={liveUrl} target="_blank">
           <FontAwesomeIcon className={styles.icon} icon={faLink} />
         </Link>
       </div>

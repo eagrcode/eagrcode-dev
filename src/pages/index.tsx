@@ -76,6 +76,8 @@ export default function Home() {
               title={"Supatask"}
               image={supatask}
               alt={"supatask-project-thumbnail"}
+              liveUrl={"https://supatask.vercel.app"}
+              gitHubUrl={"https://github.com/eagrcode/supatask"}
               text={
                 "A full-stack web app featuring user authentication, developed with React and Supabase."
               }
@@ -84,6 +86,8 @@ export default function Home() {
               title={"EMDB"}
               image={emdb}
               alt={"emdb-project-thumbnail"}
+              gitHubUrl={"https://github.com/eagrcode/EMDB"}
+              liveUrl={"https://emdb-eagrcode.netlify.app"}
               text={
                 "A full-stack web app featuring user authentication, developed with React and Supabase."
               }
@@ -92,12 +96,16 @@ export default function Home() {
               title={"MoonGazer Ceremonies"}
               image={moongazer}
               alt={"moongazer-project-thumbnail"}
+              gitHubUrl={"https://github.com/eagrcode/moongazer-ceremonies"}
+              liveUrl={"https://moongazerceremonies.co.uk"}
               text={"Business page for Lincolnshire based Celebrant."}
             />
             <ProjectCard
               title={"Eagrcode"}
               image={supatask}
               alt={"eagrcode-project-thumbnail"}
+              gitHubUrl={""}
+              liveUrl={""}
               text={
                 "A full-stack web app featuring user authentication, developed with React and Supabase."
               }
