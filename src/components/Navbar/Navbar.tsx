@@ -24,7 +24,7 @@ export default function Navbar() {
   const [isScroll, setIsScroll] = useState(false);
 
   return (
-    <aside className={isScroll ? `${styles.sidebar} ${styles.scroll}` : styles.sidebar}>
+    <aside className={styles.sidebar}>
       <Link className={styles.logo} href="/">
         {"<eagrcode />"}
       </Link>
