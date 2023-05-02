@@ -25,9 +25,9 @@ export default function Navbar() {
 
   return (
     <aside className={isScroll ? `${styles.sidebar} ${styles.scroll}` : styles.sidebar}>
-      <a className={styles.logo} href="/">
+      <Link className={styles.logo} href="/">
         {"<eagrcode />"}
-      </a>
+      </Link>
       <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className={isOpen ? `${styles.sidebarBtm} ${styles.isOpen}` : styles.sidebarBtm}>
         <nav className={styles.nav}>
