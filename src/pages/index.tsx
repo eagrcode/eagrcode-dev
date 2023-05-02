@@ -50,7 +50,7 @@ export default function Home() {
         <Hero />
         <HeroBtn />
       </section>
-      <section className={styles.aboutSection}>
+      <section id="scroll-to-about" className={styles.aboutSection}>
         <div className={styles.about}>
           <h2>About Me</h2>
           <p>
@@ -73,7 +73,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="projects" className={styles.section}>
+      <section id="scroll-to-projects" className={styles.section}>
         <div className={styles.projectsWrapper}>
           <h2>Projects</h2>
           <div className={styles.projectGrid}>
@@ -108,7 +108,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className={styles.section}>
+      <section id="scroll-to-contact" className={styles.section}>
         <h2>Contact Me</h2>
       </section>
     </>

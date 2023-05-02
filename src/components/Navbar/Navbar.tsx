@@ -23,46 +23,27 @@ export default function Navbar() {
   const { isOpen, setIsOpen } = useContextProvider();
   const [isScroll, setIsScroll] = useState(false);
 
-  // set bg blur on scroll
-  // function handleScroll() {
-  //   if (window.scrollY >= 64) {
-  //     setIsScroll(true);
-  //   } else {
-  //     setIsScroll(false);
-  //   }
-  // }
-
-  // check for window to allow client side to execute
-  // if (typeof window !== "undefined") {
-  //   window.addEventListener("scroll", handleScroll);
-  // }
-
   return (
     <aside className={isScroll ? `${styles.sidebar} ${styles.scroll}` : styles.sidebar}>
-      <Link className={styles.logo} href="/">
+      <a className={styles.logo} href="/">
         {"<eagrcode />"}
-      </Link>
+      </a>
       <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className={isOpen ? `${styles.sidebarBtm} ${styles.isOpen}` : styles.sidebarBtm}>
         <nav className={styles.nav}>
           <ul className={styles.menu}>
-            <li className={styles.item}>
-              <Link className={styles.link} href="">
-                Home
-              </Link>
-            </li>
-            <li className={styles.item}>
-              <Link className={styles.link} href="">
+            <li className={styles.item} onClick={() => setIsOpen(false)}>
+              <Link className={styles.link} href="#scroll-to-about" scroll={false}>
                 About
               </Link>
             </li>
-            <li className={styles.item}>
-              <Link className={styles.link} href="">
-                Portfolio
+            <li className={styles.item} onClick={() => setIsOpen(false)}>
+              <Link className={styles.link} href="#scroll-to-projects" scroll={false}>
+                Projects
               </Link>
             </li>
-            <li className={styles.item}>
-              <Link className={styles.link} href="">
+            <li className={styles.item} onClick={() => setIsOpen(false)}>
+              <Link className={styles.link} href="#scroll-to-contact" scroll={false}>
                 Contact
               </Link>
             </li>
