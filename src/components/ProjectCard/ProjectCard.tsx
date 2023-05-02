@@ -15,13 +15,14 @@ type props = {
   title: string;
   image: StaticImageData;
   text: string;
+  alt: string;
 };
 
-export default function ProjectCard({ title, image, text }: props) {
+export default function ProjectCard({ title, image, text, alt }: props) {
   return (
     <div className={styles.project}>
       <h3>{title}</h3>
-      <Image src={image} alt="supatask-project-cover" style={{ height: "auto", width: "100%" }} />
+      <Image src={image} alt={alt} style={{ height: "auto", width: "100%" }} placeholder="blur" />
       <p>{text}</p>
       <div className={styles.iconContainer}>
         <Link href="">

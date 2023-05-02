@@ -1,8 +1,5 @@
 // next
 import Head from "next/head";
-
-// next font
-import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
 // styles
@@ -16,6 +13,11 @@ import ProjectCard from "@/components/ProjectCard/ProjectCard";
 // context
 import { useContextProvider } from "@/context/ContextProvider";
 
+// images
+import supatask from "@/assets/images/supatask-thumbnail.png";
+import emdb from "@/assets/images/emdb-thumbnail.png";
+import moongazer from "@/assets/images/moongazer-thumbnail.png";
+
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -26,13 +28,6 @@ import {
   faReact,
   faSass,
 } from "@fortawesome/free-brands-svg-icons";
-
-// images
-import supatask from "@/assets/images/supatask-thumbnail.png";
-import emdb from "@/assets/images/emdb-thumbnail.png";
-
-const inter = Inter({ subsets: ["latin"] });
-const myFont = localFont({ src: "../assets/my-font.ttf", fallback: ["sans-serif"] });
 
 export default function Home() {
   // initial state
@@ -80,6 +75,7 @@ export default function Home() {
             <ProjectCard
               title={"Supatask"}
               image={supatask}
+              alt={"supatask-project-thumbnail"}
               text={
                 "A full-stack web app featuring user authentication, developed with React and Supabase."
               }
@@ -87,20 +83,21 @@ export default function Home() {
             <ProjectCard
               title={"EMDB"}
               image={emdb}
+              alt={"emdb-project-thumbnail"}
               text={
                 "A full-stack web app featuring user authentication, developed with React and Supabase."
               }
             />
             <ProjectCard
               title={"MoonGazer Ceremonies"}
-              image={supatask}
-              text={
-                "A full-stack web app featuring user authentication, developed with React and Supabase."
-              }
+              image={moongazer}
+              alt={"moongazer-project-thumbnail"}
+              text={"Business page for Lincolnshire based Celebrant."}
             />
             <ProjectCard
               title={"Eagrcode"}
               image={supatask}
+              alt={"eagrcode-project-thumbnail"}
               text={
                 "A full-stack web app featuring user authentication, developed with React and Supabase."
               }
