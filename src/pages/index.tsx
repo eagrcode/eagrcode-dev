@@ -9,6 +9,7 @@ import styles from "@/styles/Home.module.scss";
 import HeroBtn from "@/components/buttons/HeroBtn/HeroBtn";
 import Hero from "@/components/Hero/Hero";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
+import ContactForm from "@/components/ContactForm/ContactForm";
 
 // context
 import { useContextProvider } from "@/context/ContextProvider";
@@ -117,8 +118,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="scroll-to-contact" className={styles.section}>
-        <h2>Contact Me</h2>
+      <section id="scroll-to-contact" className={styles.contactSection}>
+        <div className={styles.contactWrapper}>
+          <h2>Contact Me</h2>
+          <ContactForm />
+        </div>
       </section>
     </>
   );

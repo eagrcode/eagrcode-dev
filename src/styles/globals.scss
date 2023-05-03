@@ -6,6 +6,10 @@
   box-sizing: border-box;
   scroll-padding-top: var(--nav-height);
   scroll-behavior: smooth;
+
+  @media (min-width: 900px) {
+    scroll-padding-top: 1rem;
+  }
 }
 
 html {
