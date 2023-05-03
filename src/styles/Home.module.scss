@@ -91,7 +91,7 @@
   max-width: 750px;
   height: auto;
 
-  @media (min-width: 900px) {
+  @media (min-width: 1200px) {
     grid-template-columns: 1fr 1fr;
     max-width: fit-content;
   }
