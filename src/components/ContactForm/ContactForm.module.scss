@@ -2,4 +2,40 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  gap: 1rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.input,
+.message {
+  background-color: hsl(250, 50%, 15%);
+  border: solid 1px hsl(250, 50%, 15%);
+  outline: transparent;
+  padding: 8px;
+  font-size: 1rem;
+  color: var(--text-color-dark);
+  border-radius: 3px;
+
+  &:focus {
+    border: solid 1px var(--accent-color);
+  }
+}
+
+.button {
+  width: 100%;
+  border-radius: 3px;
+  background-color: var(--accent-color);
+  border: transparent;
+  font-size: 1.2rem;
+  padding: 8px;
+  color: hsl(250, 15%, 20%);
+}
+
+.message {
+  height: 200px;
 }
