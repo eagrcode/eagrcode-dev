@@ -4,11 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-padding-top: var(--nav-height);
+  // scroll-padding-top: var(--nav-height);
   scroll-behavior: smooth;
 
   @media (min-width: 900px) {
-    scroll-padding-top: 1rem;
+    // scroll-padding-top: 1rem;
   }
 }
 

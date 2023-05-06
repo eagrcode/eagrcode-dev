@@ -69,6 +69,10 @@
   color: var(--accent-color);
 }
 
+#scroll-to-projects {
+  scroll-padding-top: 1rem;
+}
+
 .projectsSection {
   display: flex;
   flex-direction: column;
@@ -102,12 +106,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .contactWrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 500px;
   gap: 1rem;
 }

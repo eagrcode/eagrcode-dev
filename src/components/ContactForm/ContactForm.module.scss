@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  // max-width: 500px;
   gap: 1rem;
 
   div {
@@ -13,16 +14,21 @@
 
 .input,
 .message {
+  width: 100%;
   background-color: hsl(250, 50%, 15%);
-  border: solid 1px hsl(250, 50%, 15%);
+  border: solid 2px hsl(250, 50%, 15%);
   outline: transparent;
   padding: 8px;
   font-size: 1rem;
   color: var(--text-color-dark);
-  border-radius: 3px;
+  border-radius: 2px;
 
   &:focus {
-    border: solid 1px var(--accent-color);
+    border: solid 2px var(--accent-color);
+  }
+
+  &:hover {
+    border: solid 2px var(--accent-color);
   }
 }
 
@@ -32,10 +38,17 @@
   background-color: var(--accent-color);
   border: transparent;
   font-size: 1.2rem;
+  font-weight: 600;
   padding: 8px;
-  color: hsl(250, 15%, 20%);
+  color: hsl(250, 15%, 10%);
+  cursor: pointer;
+
+  &:hover {
+    background-color: hsla(50, 90%, 80%);
+  }
 }
 
 .message {
   height: 200px;
+  resize: none;
 }

@@ -20,20 +20,27 @@ export default function ContactForm() {
     >
       <div>
         <label htmlFor="firstName">First name</label>
-        <input className={styles.input} id="firstName" type="text" name="First name" />
+        <input className={styles.input} id="firstName" type="text" name="First name" required />
       </div>
       <div>
         <label htmlFor="lastName">Last name</label>
-        <input className={styles.input} id="lastName" type="text" name="Last name" />
+        <input className={styles.input} id="lastName" type="text" name="Last name" required />
       </div>
       <div>
         <label htmlFor="email">Email Address</label>
-        <input className={styles.input} id="email" type="email" name="Email" />
+        <input
+          className={styles.input}
+          id="email"
+          type="email"
+          name="Email"
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
       </div>
       <div>
         <label htmlFor="message">Message</label>
-        <textarea className={styles.message} id="message" name="Message" />
+        <textarea className={styles.message} id="message" name="Message" required minLength={10} />
         <ValidationError prefix="Message" field="message" errors={state.errors} />
       </div>
 
