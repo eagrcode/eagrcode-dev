@@ -18,6 +18,7 @@ import { useContextProvider } from "@/context/ContextProvider";
 import supatask from "@/assets/images/supatask-thumbnail.png";
 import emdb from "@/assets/images/emdb-thumbnail.png";
 import moongazer from "@/assets/images/moongazer-thumbnail.png";
+import emdbmob from "@/assets/images/emdb-mobile-hero.jpg";
 
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -79,7 +80,7 @@ export default function Home() {
           <div className={styles.projectGrid}>
             <ProjectCard
               title={"EMDB"}
-              image={emdb}
+              image={emdbmob}
               alt={"emdb-project-thumbnail"}
               gitHubUrl={"https://github.com/eagrcode/EMDB"}
               liveUrl={"https://emdb-eagrcode.netlify.app"}
@@ -87,6 +88,7 @@ export default function Home() {
                 "A full-stack web app featuring user authentication, developed with React and Supabase."
               }
             />
+
             <ProjectCard
               title={"Supatask"}
               image={supatask}
