@@ -89,7 +89,7 @@
   h2 {
     padding: var(--section-padding-mob);
 
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
       padding: 0;
     }
   }
@@ -107,6 +107,7 @@
   @media (min-width: 1200px) {
     grid-template-columns: 1fr 1fr;
     max-width: fit-content;
+    gap: 2rem;
   }
 }
 

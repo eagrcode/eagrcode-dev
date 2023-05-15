@@ -10,7 +10,7 @@
 
   /* dark theme */
   --background-color-dark: hsl(250, 50%, 12%);
-  --text-color-dark: hsl(250, 15%, 60%);
-  --header-color-dark: hsl(250, 20%, 85%);
+  --text-color-dark: hsl(250, 15%, 65%);
+  --header-color-dark: hsl(250, 20%, 90%);
   --nav-background-color-dark: hsl(250, 50%, 7%);
 }

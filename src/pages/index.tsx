@@ -80,7 +80,7 @@ export default function Home() {
           <div className={styles.projectGrid}>
             <ProjectCard
               title={"EMDB"}
-              image={emdbmob}
+              image={emdb}
               alt={"emdb-project-thumbnail"}
               gitHubUrl={"https://github.com/eagrcode/EMDB"}
               liveUrl={"https://emdb-eagrcode.netlify.app"}

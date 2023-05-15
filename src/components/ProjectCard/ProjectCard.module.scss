@@ -28,14 +28,61 @@
 }
 
 .swiper {
+  position: relative;
   display: flex;
+}
+
+.swiperInner {
+  display: flex;
+  align-items: center;
   gap: 10px;
   width: 100%;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   overscroll-behavior-x: contain;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   img {
     scroll-snap-align: start;
+  }
+
+  &.scrollRight {
+    transform: translateX(-33%);
+  }
+}
+
+.navigation {
+  position: absolute;
+  height: 100%;
+  width: calc(15% - 10px);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--background-color-dark);
+  opacity: 0.5;
+
+  &.left {
+    left: 0;
+  }
+
+  &.right {
+    right: 0;
+  }
+
+  button {
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: red;
+    button {
+      display: block;
+    }
   }
 }
