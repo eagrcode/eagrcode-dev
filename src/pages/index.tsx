@@ -13,6 +13,7 @@ import ContactForm from "@/components/ContactForm/ContactForm";
 
 // context
 import { useContextProvider } from "@/context/ContextProvider";
+import { useTheme } from "@/context/ThemeProvider";
 
 // images
 import supatask from "@/assets/images/supatask-thumbnail.png";
@@ -34,6 +35,7 @@ import {
 export default function Home() {
   // initial state
   const { isOpen } = useContextProvider();
+  const { theme } = useTheme();
 
   return (
     <>
@@ -49,15 +51,15 @@ export default function Home() {
       </section>
       <section id="scroll-to-about" className={styles.aboutSection}>
         <div className={styles.about}>
-          <h2>About Me</h2>
+          <h2 className={theme}>About Me</h2>
           <div className={styles.aboutBtm}>
             <div className={styles.aboutText}>
-              <p>
+              <p className={theme}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ex impedit deserunt,
                 eius esse fugiat itaque sed sunt quidem consequatur debitis laudantium, repellendus
                 accusamus reprehenderit ducimus provident ut corrupti architecto?
               </p>
-              <p>
+              <p className={theme}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ex impedit deserunt,
                 eius esse fugiat itaque sed sunt quidem consequatur debitis laudantium, repellendus
                 accusamus reprehenderit ducimus provident ut corrupti architecto?
@@ -76,7 +78,7 @@ export default function Home() {
       </section>
       <section id="scroll-to-projects" className={styles.projectsSection}>
         <div className={styles.projectsWrapper}>
-          <h2>Projects</h2>
+          <h2 className={theme}>Projects</h2>
           <div className={styles.projectGrid}>
             <ProjectCard
               title={"EMDB"}
@@ -122,7 +124,7 @@ export default function Home() {
       </section>
       <section id="scroll-to-contact" className={styles.contactSection}>
         <div className={styles.contactWrapper}>
-          <h2>Contact Me</h2>
+          <h2 className={theme}>Contact Me</h2>
           <ContactForm />
         </div>
       </section>

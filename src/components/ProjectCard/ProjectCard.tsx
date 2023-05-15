@@ -8,6 +8,9 @@ import { useState, useRef, createRef, useEffect, useLayoutEffect } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
+// context
+import { useTheme } from "@/context/ThemeProvider";
+
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -25,6 +28,7 @@ type props = {
 
 export default function ProjectCard({ title, image, text, alt, gitHubUrl, liveUrl }: props) {
   // initial state
+  const { theme } = useTheme();
   const [scrollRight, setScrollRight] = useState<boolean>(false);
   const [width, setWidth] = useState<number>(0);
 
@@ -105,7 +109,7 @@ export default function ProjectCard({ title, image, text, alt, gitHubUrl, liveUr
           <FontAwesomeIcon className={styles.icon} icon={faLink} />
         </Link>
       </div>
-      <p>{text}</p>
+      <p className={theme}>{text}</p>
     </div>
   );
 }

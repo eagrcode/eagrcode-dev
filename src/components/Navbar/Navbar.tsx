@@ -13,6 +13,7 @@ import { useState } from "react";
 
 // context
 import { useContextProvider } from "@/context/ContextProvider";
+import { useTheme } from "@/context/ThemeProvider";
 
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,15 +23,22 @@ export default function Navbar() {
   // initial state
   const { isOpen, setIsOpen } = useContextProvider();
   const [isScroll, setIsScroll] = useState(false);
+  const { theme } = useTheme();
 
   return (
-    <aside className={styles.sidebar}>
-      <Link className={styles.logo} href="/">
+    <aside className={`${styles.sidebar} ${styles[theme]}`}>
+      <Link className={`${styles.logo} ${styles[theme]}`} href="/">
         {"<eagrcode"}
         <span style={{ marginLeft: "8px" }}>{"/>"}</span>
       </Link>
       <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
-      <div className={isOpen ? `${styles.sidebarBtm} ${styles.isOpen}` : styles.sidebarBtm}>
+      <div
+        className={
+          isOpen
+            ? `${styles.sidebarBtm} ${styles.isOpen} ${styles[theme]}`
+            : `${styles.sidebarBtm} ${styles[theme]}`
+        }
+      >
         <nav className={styles.nav}>
           <ul className={styles.menu}>
             <li className={styles.item} onClick={() => setIsOpen(false)}>

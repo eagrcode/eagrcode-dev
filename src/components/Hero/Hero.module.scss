@@ -5,49 +5,65 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem;
+
   width: 100%;
   max-width: 500px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    border-top: 1px solid var(--text-color-dark);
-    border-left: 1px solid var(--text-color-dark);
-    width: var(--before-elements-size);
-    height: var(--before-elements-size);
-    top: 0;
-    left: 0;
-    border-top-left-radius: 5px;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   border-top: 1px solid var(--text-color-dark);
+  //   border-left: 1px solid var(--text-color-dark);
+  //   width: var(--before-elements-size);
+  //   height: var(--before-elements-size);
+  //   top: 0;
+  //   left: 0;
+  //   border-top-left-radius: 5px;
+  // }
 
-  &::after {
-    content: "";
-    position: absolute;
-    border-bottom: 1px solid var(--text-color-dark);
-    border-right: 1px solid var(--text-color-dark);
-    width: var(--before-elements-size);
-    height: var(--before-elements-size);
-    bottom: 0;
-    right: 0;
-    border-bottom-right-radius: 5px;
-  }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   border-bottom: 1px solid var(--text-color-dark);
+  //   border-right: 1px solid var(--text-color-dark);
+  //   width: var(--before-elements-size);
+  //   height: var(--before-elements-size);
+  //   bottom: 0;
+  //   right: 0;
+  //   border-bottom-right-radius: 5px;
+  // }
 
-  &.isOpen::before,
-  &.isOpen::after {
-    visibility: hidden;
-  }
+  // &.isOpen::before,
+  // &.isOpen::after {
+  //   visibility: hidden;
+  // }
 }
 
 .hi {
   font-family: "SF Mono", serif;
   margin-left: 4px;
-  color: var(--accent-color);
+
+  &.dark {
+    color: var(--accent-color-dark);
+  }
+
+  &.light {
+    color: var(--accent-color-light);
+  }
 }
 
 .h1 {
   font-family: sans-serif;
-  font-size: 2.5rem;
+  font-size: 4rem;
+  word-wrap: break-word;
+
+  &.dark {
+    color: var(--header-color-dark);
+  }
+
+  &.light {
+    color: var(--header-color-light);
+  }
 
   @media (min-width: 900px) {
     font-size: 3rem;
@@ -57,4 +73,25 @@
 .p {
   font-family: sans-serif;
   margin-left: 5px;
+
+  &.dark {
+    color: var(--text-color-dark);
+  }
+
+  &.light {
+    color: var(--text-color-light);
+  }
+}
+
+.img {
+  transform: perspective(800px) rotateY(25deg) scale(0.9) rotateX(10deg);
+  filter: blur(2px);
+  opacity: 0.5;
+  transition: 0.6s ease all;
+
+  &:hover {
+    transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
 }
