@@ -6,10 +6,10 @@ import localFont from "next/font/local";
 import styles from "@/styles/Home.module.scss";
 
 // components
-import HeroBtn from "@/components/buttons/HeroBtn/HeroBtn";
 import Hero from "@/components/Hero/Hero";
-import ProjectCard from "@/components/ProjectCard/ProjectCard";
-import ContactForm from "@/components/ContactForm/ContactForm";
+import About from "@/components/About/About";
+import ProjectCard from "@/components/Projects/ProjectCard/ProjectCard";
+import ContactForm from "@/components/Contact/ContactForm/ContactForm";
 
 // context
 import { useContextProvider } from "@/context/ContextProvider";
@@ -20,17 +20,6 @@ import supatask from "@/assets/images/supatask-thumbnail.png";
 import emdb from "@/assets/images/emdb-thumbnail.png";
 import moongazer from "@/assets/images/moongazer-thumbnail.png";
 import emdbmob from "@/assets/images/emdb-mobile-hero.jpg";
-
-// icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAws,
-  faCss3,
-  faHtml5,
-  faNodeJs,
-  faReact,
-  faSass,
-} from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   // initial state
@@ -45,37 +34,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className={isOpen ? `${styles.heroSection} ${styles.isOpen}` : styles.heroSection}>
-        <Hero />
-        <HeroBtn />
-      </section>
-      <section id="scroll-to-about" className={styles.aboutSection}>
-        <div className={styles.about}>
-          <h2 className={theme}>About Me</h2>
-          <div className={styles.aboutBtm}>
-            <div className={styles.aboutText}>
-              <p className={theme}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ex impedit deserunt,
-                eius esse fugiat itaque sed sunt quidem consequatur debitis laudantium, repellendus
-                accusamus reprehenderit ducimus provident ut corrupti architecto?
-              </p>
-              <p className={theme}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ex impedit deserunt,
-                eius esse fugiat itaque sed sunt quidem consequatur debitis laudantium, repellendus
-                accusamus reprehenderit ducimus provident ut corrupti architecto?
-              </p>
-            </div>
-            <div className={styles.techGrid}>
-              <FontAwesomeIcon className={styles.gridItem} icon={faReact} />
-              <FontAwesomeIcon className={styles.gridItem} icon={faSass} />
-              <FontAwesomeIcon className={styles.gridItem} icon={faNodeJs} />
-              <FontAwesomeIcon className={styles.gridItem} icon={faCss3} />
-              <FontAwesomeIcon className={styles.gridItem} icon={faHtml5} />
-              <FontAwesomeIcon className={styles.gridItem} icon={faAws} />
-            </div>
-          </div>
-        </div>
-      </section>
+
+      <Hero />
+      <About />
+
       <section id="scroll-to-projects" className={styles.projectsSection}>
         <div className={styles.projectsWrapper}>
           <h2 className={theme}>Projects</h2>

@@ -2,8 +2,8 @@
 import styles from "./Navbar.module.scss";
 
 // components
-import Hamburger from "./Hamburger";
-import ResumeBtn from "../buttons/ResumeBtn/ResumeBtn";
+import Hamburger from "./Hamburger/Hamburger";
+import ResumeBtn from "@/components/ResumeBtn/ResumeBtn";
 
 // next
 import Link from "next/link";

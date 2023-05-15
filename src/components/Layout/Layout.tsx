@@ -2,7 +2,7 @@
 import Navbar from "@/components/Navbar/Navbar";
 
 // styles
-import styles from "./NavLayout.module.scss";
+import styles from "./Layout.module.scss";
 
 // context provider
 import { useTheme } from "@/context/ThemeProvider";
