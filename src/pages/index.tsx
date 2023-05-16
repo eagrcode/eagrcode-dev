@@ -9,7 +9,7 @@ import styles from "@/styles/Home.module.scss";
 import Hero from "@/components/Hero/Hero";
 import About from "@/components/About/About";
 import Projects from "@/components/Projects/Projects";
-import ContactForm from "@/components/Contact/ContactForm/ContactForm";
+import Contact from "@/components/Contact/Contact";
 
 // context
 import { useContextProvider } from "@/context/ContextProvider";
@@ -31,13 +31,7 @@ export default function Home() {
       <Hero />
       <About />
       <Projects />
-
-      <section id="scroll-to-contact" className={styles.contactSection}>
-        <div className={styles.contactWrapper}>
-          <h2 className={theme}>Contact Me</h2>
-          <ContactForm />
-        </div>
-      </section>
+      <Contact />
     </>
   );
 }
