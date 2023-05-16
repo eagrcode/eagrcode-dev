@@ -3,11 +3,12 @@
   flex-direction: column;
   width: 100%;
   gap: 1rem;
-  padding: 2rem 0;
-  border-radius: 2px;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
-  // background-color: hsl(250, 50%, 15%);
-  // box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.titleContainer {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .iconContainer {
@@ -84,5 +85,25 @@
     button {
       display: block;
     }
+  }
+}
+
+.tagContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.tag {
+  background-color: var(--nav-bg-color-dark);
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+
+  &.dark {
+    color: var(--text-color-dark);
+  }
+
+  &.light {
+    color: var(--text-color-light);
   }
 }

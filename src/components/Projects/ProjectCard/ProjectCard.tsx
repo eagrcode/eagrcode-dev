@@ -63,8 +63,6 @@ export default function ProjectCard({ title, image, text, alt, gitHubUrl, liveUr
 
   return (
     <div className={styles.project}>
-      <h3>{title}</h3>
-
       <div className={styles.swiper}>
         <div
           className={
@@ -82,7 +80,6 @@ export default function ProjectCard({ title, image, text, alt, gitHubUrl, liveUr
             style={{ height: "auto", width: "85%" }}
             ref={imgRef}
           />
-
           <Image
             src={image}
             alt={alt}
@@ -101,15 +98,26 @@ export default function ProjectCard({ title, image, text, alt, gitHubUrl, liveUr
         </div>
       </div>
 
-      <div className={styles.iconContainer}>
-        <Link href={gitHubUrl} target="_blank">
-          <FontAwesomeIcon className={styles.icon} icon={faGithub} />
-        </Link>
-        <Link href={liveUrl} target="_blank">
-          <FontAwesomeIcon className={styles.icon} icon={faLink} />
-        </Link>
+      <div className={styles.titleContainer}>
+        <h3>{title}</h3>
+        <div className={styles.iconContainer}>
+          <Link href={gitHubUrl} target="_blank">
+            <FontAwesomeIcon className={styles.icon} icon={faGithub} />
+          </Link>
+          <Link href={liveUrl} target="_blank">
+            <FontAwesomeIcon className={styles.icon} icon={faLink} />
+          </Link>
+        </div>
       </div>
+
       <p className={theme}>{text}</p>
+
+      <div className={styles.tagContainer}>
+        <div className={`${styles.tag} ${styles[theme]}`}>React</div>
+        <div className={`${styles.tag} ${styles[theme]}`}>TMDB api</div>
+        <div className={`${styles.tag} ${styles[theme]}`}>Netlify</div>
+        <div className={`${styles.tag} ${styles[theme]}`}>ViteJS</div>
+      </div>
     </div>
   );
 }
