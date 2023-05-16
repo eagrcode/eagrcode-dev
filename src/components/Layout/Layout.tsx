@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar/Navbar";
 // styles
 import styles from "./Layout.module.scss";
 
-// context provider
+// context
 import { useTheme } from "@/context/ThemeProvider";
 
 export default function NavLayout({ children }: { children: React.ReactNode }) {

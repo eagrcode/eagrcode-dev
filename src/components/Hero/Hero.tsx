@@ -17,10 +17,11 @@ import HeroImg from "@/assets/images/hero-img.png";
 export default function Hero() {
   // initial state
   const { theme } = useTheme();
+  const { isOpen } = useContextProvider();
 
   return (
     <section className={styles.heroSection}>
-      <div className={styles.hero}>
+      <div className={isOpen ? `${styles.hero} ${styles.isOpen}` : styles.hero}>
         <Image
           className={styles.img}
           src={HeroImg}
