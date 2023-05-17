@@ -27,20 +27,20 @@ export default function Navbar() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <aside className={`${styles.sidebar} ${styles[theme]}`}>
-      <Link className={`${styles.logo} ${styles[theme]}`} href="/">
-        {"<eagrcode"}
-        <span style={{ marginLeft: "8px" }}>{"/>"}</span>
-      </Link>
-      <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
-      <div
-        className={
-          isOpen
-            ? `${styles.sidebarBtm} ${styles.isOpen} ${styles[theme]}`
-            : `${styles.sidebarBtm} ${styles[theme]}`
-        }
-      >
-        <nav className={styles.nav}>
+    <header className={`${styles.header} ${styles[theme]}`}>
+      <nav className={styles.nav}>
+        <Link className={`${styles.logo} ${styles[theme]}`} href="/">
+          {"<eagrcode"}
+          <span style={{ marginLeft: "8px" }}>{"/>"}</span>
+        </Link>
+        <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
+        <div
+          className={
+            isOpen
+              ? `${styles.menuContainer} ${styles.isOpen} ${styles[theme]}`
+              : `${styles.menuContainer} ${styles[theme]}`
+          }
+        >
           <ul className={styles.menu}>
             <li className={styles.item} onClick={() => setIsOpen(false)}>
               <Link
@@ -70,27 +70,29 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-        </nav>
-        <ResumeBtn />
-        <ul className={styles.socialMenu}>
-          <li>
-            <Link href="">
-              <FontAwesomeIcon className={styles.icon} icon={faGithub} />
-            </Link>
-          </li>
-          <li>
-            <Link href="">
-              <FontAwesomeIcon className={styles.icon} icon={faLinkedin} />
-            </Link>
-          </li>
-        </ul>
 
-        <FontAwesomeIcon
-          className={`${styles.icon} ${styles.toggle}`}
-          icon={theme === "dark" ? faLightbulb : faMoon}
-          onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}
-        />
-      </div>
-    </aside>
+          <ResumeBtn />
+          <ul className={styles.socialMenu}>
+            <li>
+              <Link href="">
+                <FontAwesomeIcon className={styles.icon} icon={faGithub} />
+              </Link>
+            </li>
+            <li>
+              <Link href="">
+                <FontAwesomeIcon className={styles.icon} icon={faLinkedin} />
+              </Link>
+            </li>
+          </ul>
+          <div className={styles.toggle}>
+            <FontAwesomeIcon
+              className={styles.icon}
+              icon={theme === "dark" ? faLightbulb : faMoon}
+              onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}
+            />
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 }

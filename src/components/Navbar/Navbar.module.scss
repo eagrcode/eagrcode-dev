@@ -1,14 +1,8 @@
-.sidebar {
+.header {
   position: fixed;
   top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: var(--nav-height);
-  width: 100%;
-  padding: 0 1rem;
   z-index: 999;
-
+  width: 100%;
   backdrop-filter: blur(10px);
 
   // .dark {
@@ -20,23 +14,34 @@
   // }
 
   @media (min-width: 900px) {
-    position: sticky;
-    flex-direction: column;
-    left: 0;
-    height: 100vh;
-    width: fit-content;
+    top: 0;
+    width: 100%;
     // width: var(--sidebar-width);
     // padding: 1rem;
     padding: 0;
     border-right: solid 1px rgba(120, 120, 120, 0.2);
 
-    &.dark {
-      background-color: var(--nav-bg-color-dark);
-    }
+    // &.dark {
+    //   background-color: var(--nav-bg-color-dark);
+    // }
 
-    &.light {
-      background-color: var(--nav-bg-color-light);
-    }
+    // &.light {
+    //   background-color: var(--nav-bg-color-light);
+    // }
+  }
+}
+
+.nav {
+  font-family: "SF Mono", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: var(--nav-height);
+  padding: 0 1rem;
+
+  @media (min-width: 900px) {
+    padding: 0 3rem;
   }
 }
 
@@ -57,12 +62,11 @@
   }
 
   @media (min-width: 900px) {
-    display: flex;
-    padding: 1rem;
+    font-size: 1.5rem;
   }
 }
 
-.sidebarBtm {
+.menuContainer {
   display: flex;
   position: absolute;
   top: 0;
@@ -93,14 +97,21 @@
 
   @media (min-width: 900px) {
     position: relative;
-    width: 100%;
+    width: fit-content;
+    height: 100%;
+    flex-direction: row;
     transform: translate(0);
-  }
-}
+    background-color: transparent;
+    z-index: 1;
 
-.nav {
-  width: 100%;
-  font-family: "SF Mono", sans-serif;
+    &.dark {
+      background-color: transparent;
+    }
+
+    &.light {
+      background-color: transparent;
+    }
+  }
 }
 
 .menu {
@@ -112,7 +123,11 @@
 
   @media (min-width: 900px) {
     display: flex;
+    flex-direction: row;
     text-align: center;
+    align-items: center;
+    width: fit-content;
+    height: 100%;
   }
 }
 
@@ -126,7 +141,7 @@
 
 .link {
   display: block;
-  padding: 1rem;
+  padding: 1rem 8px;
 
   &.dark {
     color: var(--text-color-dark);
@@ -151,6 +166,10 @@
   //     visibility: visible;
   //   }
   // }
+
+  @media (min-width: 900px) {
+    display: flex;
+  }
 }
 
 .icon {
