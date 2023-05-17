@@ -18,12 +18,13 @@ import { useTheme } from "@/context/ThemeProvider";
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faLightbulb, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   // initial state
   const { isOpen, setIsOpen } = useContextProvider();
   const [isScroll, setIsScroll] = useState(false);
-  const { theme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   return (
     <aside className={`${styles.sidebar} ${styles[theme]}`}>
@@ -42,17 +43,29 @@ export default function Navbar() {
         <nav className={styles.nav}>
           <ul className={styles.menu}>
             <li className={styles.item} onClick={() => setIsOpen(false)}>
-              <Link className={styles.link} href="#scroll-to-about" scroll={false}>
+              <Link
+                className={`${styles.link} ${styles[theme]}`}
+                href="#scroll-to-about"
+                scroll={false}
+              >
                 About
               </Link>
             </li>
             <li className={styles.item} onClick={() => setIsOpen(false)}>
-              <Link className={styles.link} href="#scroll-to-projects" scroll={false}>
+              <Link
+                className={`${styles.link} ${styles[theme]}`}
+                href="#scroll-to-projects"
+                scroll={false}
+              >
                 Projects
               </Link>
             </li>
             <li className={styles.item} onClick={() => setIsOpen(false)}>
-              <Link className={styles.link} href="#scroll-to-contact" scroll={false}>
+              <Link
+                className={`${styles.link} ${styles[theme]}`}
+                href="#scroll-to-contact"
+                scroll={false}
+              >
                 Contact
               </Link>
             </li>
@@ -63,16 +76,20 @@ export default function Navbar() {
           <li>
             <Link href="">
               <FontAwesomeIcon className={styles.icon} icon={faGithub} />
-              <span className={styles.tooltip}>GitHub</span>
             </Link>
           </li>
-
           <li>
             <Link href="">
               <FontAwesomeIcon className={styles.icon} icon={faLinkedin} />
             </Link>
           </li>
         </ul>
+
+        <FontAwesomeIcon
+          className={`${styles.icon} ${styles.toggle}`}
+          icon={theme === "dark" ? faLightbulb : faMoon}
+          onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}
+        />
       </div>
     </aside>
   );

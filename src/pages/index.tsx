@@ -16,10 +16,6 @@ import { useContextProvider } from "@/context/ContextProvider";
 import { useTheme } from "@/context/ThemeProvider";
 
 export default function Home() {
-  // initial state
-  const { isOpen } = useContextProvider();
-  const { theme } = useTheme();
-
   return (
     <>
       <Head>

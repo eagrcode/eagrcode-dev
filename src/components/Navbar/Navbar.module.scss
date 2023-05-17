@@ -8,15 +8,16 @@
   width: 100%;
   padding: 0 1rem;
   z-index: 999;
+
   backdrop-filter: blur(10px);
 
-  .dark {
-    background-color: hsla(250, 50%, 12%, 0.7);
-  }
+  // .dark {
+  //   background-color: hsla(250, 50%, 12%, 0.7);
+  // }
 
-  .light {
-    background-color: hsla(250, 50%, 90%, 0.7);
-  }
+  // .light {
+  //   background-color: hsla(250, 50%, 90%, 0.7);
+  // }
 
   @media (min-width: 900px) {
     position: sticky;
@@ -124,9 +125,16 @@
 }
 
 .link {
-  color: var(--text-color-dark);
   display: block;
   padding: 1rem;
+
+  &.dark {
+    color: var(--text-color-dark);
+  }
+
+  &.light {
+    color: var(--text-color-light);
+  }
 }
 
 .socialMenu {
@@ -148,6 +156,7 @@
 .icon {
   color: var(--text-color-dark);
   font-size: 1.6rem;
+  cursor: pointer;
 
   transition: all ease-out 0.1s;
 
@@ -157,23 +166,6 @@
   }
 }
 
-.tooltip {
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  color: var(--text-color-dark);
-}
-
-.line {
-  display: none;
-  width: 1px;
-  height: 50px;
-  background-color: white;
-
-  @media (min-width: 900px) {
-    display: block;
-  }
+.toggle {
+  justify-self: flex-end;
 }

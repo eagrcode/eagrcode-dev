@@ -22,16 +22,16 @@ export default function Hero() {
   return (
     <section className={styles.heroSection}>
       <div className={isOpen ? `${styles.hero} ${styles.isOpen}` : styles.hero}>
-        <Image
+        {/* <Image
           className={styles.img}
           src={HeroImg}
           alt="vsc-hero"
           style={{ height: "auto", width: "100%" }}
-        />
+        /> */}
         <p className={`${styles.hi} ${styles[theme]}`}>Hi, my name is</p>
         <h1 className={`${styles.h1} ${styles[theme]}`}>Elliot Robinson</h1>
         <p className={`${styles.p} ${theme}`}>
-          Web Developer, with a passion for creating elegant and responsive web apps
+          I'm a Web Developer, with a passion for creating elegant and responsive web apps
         </p>
         <HeroBtn />
       </div>
