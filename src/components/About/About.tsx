@@ -40,31 +40,31 @@ export default function About() {
           </div>
         </div>
         <div className={styles.techGrid}>
-          <div className={styles.gridItem}>
+          <div className={`${styles.gridItem} ${styles[theme]}`}>
             <FontAwesomeIcon icon={faCss3} />
           </div>
-          <div className={styles.gridItem}>
+          <div className={`${styles.gridItem} ${styles[theme]}`}>
             <FontAwesomeIcon icon={faHtml5} />
           </div>
-          <div className={styles.gridItem}>
+          <div className={`${styles.gridItem} ${styles[theme]}`}>
             <FontAwesomeIcon icon={faAws} />
           </div>
-          <div className={styles.gridItem}>
+          <div className={`${styles.gridItem} ${styles[theme]}`}>
             <FontAwesomeIcon icon={faReact} />
           </div>
-          <div className={styles.gridItem}>
+          <div className={`${styles.gridItem} ${styles[theme]}`}>
             <FontAwesomeIcon icon={faSass} />
           </div>
-          <div className={styles.gridItem}>
+          <div className={`${styles.gridItem} ${styles[theme]}`}>
             <FontAwesomeIcon icon={faNodeJs} />
           </div>
-          <div className={styles.gridItem}>
+          <div className={`${styles.gridItem} ${styles[theme]}`}>
             <FontAwesomeIcon icon={faCss3} />
           </div>
-          <div className={styles.gridItem}>
+          <div className={`${styles.gridItem} ${styles[theme]}`}>
             <FontAwesomeIcon icon={faHtml5} />
           </div>
-          <div className={styles.gridItem}>
+          <div className={`${styles.gridItem} ${styles[theme]}`}>
             <FontAwesomeIcon icon={faAws} />
           </div>
         </div>

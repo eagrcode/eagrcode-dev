@@ -5,6 +5,14 @@
   // max-width: 500px;
   gap: 1rem;
 
+  &.dark {
+    color: var(--text-color-dark);
+  }
+
+  &.light {
+    color: var(--text-color-light);
+  }
+
   div {
     display: flex;
     flex-direction: column;
@@ -20,15 +28,26 @@
   outline: transparent;
   padding: 8px;
   font-size: 1rem;
-  color: var(--text-color-dark);
   border-radius: 2px;
 
-  &:focus {
-    border: solid 2px var(--accent-color);
+  &.dark {
+    color: var(--text-color-dark);
+
+    &:focus {
+      border: solid 2px var(--accent-color-dark);
+    }
+
+    &:hover {
+      border: solid 2px var(--accent-color-dark);
+    }
   }
 
-  &:hover {
-    border: solid 2px var(--accent-color);
+  &.light {
+    color: var(--text-color-light);
+
+    &:focus {
+      border: solid 2px var(--accent-color-light);
+    }
   }
 }
 

@@ -56,11 +56,11 @@
 }
 
 .navigation {
+  display: none;
   position: absolute;
   height: 100%;
   width: calc(15% - 10px);
   cursor: pointer;
-  display: flex;
   justify-content: center;
   align-items: center;
 
@@ -76,12 +76,12 @@
   }
 
   button {
+    display: none;
     padding: 5px;
     cursor: pointer;
   }
 
   &:hover {
-    background-color: red;
     button {
       display: block;
     }

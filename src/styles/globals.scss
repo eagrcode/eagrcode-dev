@@ -48,7 +48,14 @@ h2 {
 
 h3 {
   font-weight: 500;
-  color: var(--accent-color-dark);
+
+  &.dark {
+    color: var(--accent-color-dark);
+  }
+
+  &.light {
+    color: var(--accent-color-light);
+  }
 }
 
 a {
@@ -70,4 +77,8 @@ p {
   &.light {
     color: var(--text-color-light);
   }
+}
+
+button {
+  font-weight: 500;
 }
