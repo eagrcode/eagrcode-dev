@@ -75,18 +75,18 @@ export default function Navbar() {
           <ul className={styles.socialMenu}>
             <li>
               <Link href="">
-                <FontAwesomeIcon className={styles.icon} icon={faGithub} />
+                <FontAwesomeIcon className={`${styles.icon} ${styles[theme]}`} icon={faGithub} />
               </Link>
             </li>
             <li>
               <Link href="">
-                <FontAwesomeIcon className={styles.icon} icon={faLinkedin} />
+                <FontAwesomeIcon className={`${styles.icon} ${styles[theme]}`} icon={faLinkedin} />
               </Link>
             </li>
           </ul>
           <div className={styles.toggle}>
             <FontAwesomeIcon
-              className={styles.icon}
+              className={`${styles.icon} ${styles[theme]}`}
               icon={theme === "dark" ? faLightbulb : faMoon}
               onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}
             />

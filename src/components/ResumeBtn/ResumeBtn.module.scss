@@ -7,8 +7,6 @@
 
   font-size: 1rem;
   background-color: transparent;
-  border: solid 2px var(--accent-color);
-  color: var(--accent-color);
   padding: 10px 1rem;
   border-radius: 3px;
   transition: all 0.9s;
@@ -18,4 +16,14 @@
   //   top: 1rem;
   //   right: 1rem;
   // }
+
+  &.dark {
+    border: solid 2px var(--accent-color-dark);
+    color: var(--accent-color-dark);
+  }
+
+  &.light {
+    border: solid 2px var(--accent-color-light);
+    color: var(--accent-color-light);
+  }
 }
