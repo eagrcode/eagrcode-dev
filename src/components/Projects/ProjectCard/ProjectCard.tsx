@@ -77,10 +77,10 @@ export default function ProjectCard({ title, image, text, alt, gitHubUrl, liveUr
         <h3 className={theme}>{title}</h3>
         <div className={styles.iconContainer}>
           <Link href={gitHubUrl} target="_blank">
-            <FontAwesomeIcon className={styles.icon} icon={faGithub} />
+            <FontAwesomeIcon className={`${styles.icon} ${styles[theme]}`} icon={faGithub} />
           </Link>
           <Link href={liveUrl} target="_blank">
-            <FontAwesomeIcon className={styles.icon} icon={faLink} />
+            <FontAwesomeIcon className={`${styles.icon} ${styles[theme]}`} icon={faLink} />
           </Link>
         </div>
       </div>
