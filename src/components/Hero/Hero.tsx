@@ -40,10 +40,10 @@ export default function Hero() {
         </p>
         <HeroBtn />
         <div className={styles.iconContainer}>
-          <Link href="">
+          <Link href="" aria-label="GitHub profile">
             <FontAwesomeIcon className={`${styles.icon} ${styles[theme]}`} icon={faGithub} />
           </Link>
-          <Link href="">
+          <Link href="" aria-label="LinkedIn profile">
             <FontAwesomeIcon className={`${styles.icon} ${styles[theme]}`} icon={faLinkedin} />
           </Link>
         </div>
