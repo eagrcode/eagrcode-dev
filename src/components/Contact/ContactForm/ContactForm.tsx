@@ -75,7 +75,11 @@ export default function ContactForm() {
         <ValidationError prefix="Message" field="message" errors={state.errors} />
       </div>
 
-      <button className={styles.button} type="submit" disabled={state.submitting}>
+      <button
+        className={`${styles.button} ${styles[theme]}`}
+        type="submit"
+        disabled={state.submitting}
+      >
         Submit
       </button>
     </form>

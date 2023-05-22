@@ -72,7 +72,7 @@ export default function Navbar() {
           </ul>
 
           <ResumeBtn />
-          <ul className={styles.socialMenu}>
+          {/* <ul className={styles.socialMenu}>
             <li>
               <Link href="">
                 <FontAwesomeIcon className={`${styles.icon} ${styles[theme]}`} icon={faGithub} />
@@ -83,7 +83,7 @@ export default function Navbar() {
                 <FontAwesomeIcon className={`${styles.icon} ${styles[theme]}`} icon={faLinkedin} />
               </Link>
             </li>
-          </ul>
+          </ul> */}
           <div className={styles.toggle}>
             <FontAwesomeIcon
               className={`${styles.icon} ${styles[theme]}`}

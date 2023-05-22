@@ -3,6 +3,7 @@ import styles from "./Hero.module.scss";
 
 // next
 import Image from "next/image";
+import Link from "next/link";
 
 // components
 import HeroBtn from "@/components/Hero/HeroBtn/HeroBtn";
@@ -10,6 +11,10 @@ import HeroBtn from "@/components/Hero/HeroBtn/HeroBtn";
 // context
 import { useContextProvider } from "@/context/ContextProvider";
 import { useTheme } from "@/context/ThemeProvider";
+
+// icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 // images
 import HeroImg from "@/assets/images/hero-img.png";
@@ -34,6 +39,14 @@ export default function Hero() {
           I'm a Web Developer, with a passion for creating elegant and responsive web apps
         </p>
         <HeroBtn />
+        <div className={styles.iconContainer}>
+          <Link href="">
+            <FontAwesomeIcon className={`${styles.icon} ${styles[theme]}`} icon={faGithub} />
+          </Link>
+          <Link href="">
+            <FontAwesomeIcon className={`${styles.icon} ${styles[theme]}`} icon={faLinkedin} />
+          </Link>
+        </div>
       </div>
     </section>
   );

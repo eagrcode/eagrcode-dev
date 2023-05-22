@@ -22,10 +22,12 @@ export default function About() {
   const { isOpen } = useContextProvider();
 
   return (
-    <section id="scroll-to-about" className={styles.aboutSection}>
+    <section className={styles.aboutSection}>
       <div className={isOpen ? `${styles.about} ${styles.isOpen}` : styles.about}>
         <div className={styles.textContainer}>
-          <h2 className={theme}>About Me</h2>
+          <h2 id="scroll-to-about" className={theme}>
+            About Me
+          </h2>
           <div className={styles.aboutText}>
             <p className={theme}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ex impedit deserunt,
@@ -42,30 +44,39 @@ export default function About() {
         <div className={styles.techGrid}>
           <div className={`${styles.gridItem} ${styles[theme]}`}>
             <FontAwesomeIcon icon={faCss3} />
+            <p>Text</p>
           </div>
           <div className={`${styles.gridItem} ${styles[theme]}`}>
             <FontAwesomeIcon icon={faHtml5} />
+            <p>Text</p>
           </div>
           <div className={`${styles.gridItem} ${styles[theme]}`}>
             <FontAwesomeIcon icon={faAws} />
+            <p>Text</p>
           </div>
           <div className={`${styles.gridItem} ${styles[theme]}`}>
             <FontAwesomeIcon icon={faReact} />
+            <p>Text</p>
           </div>
           <div className={`${styles.gridItem} ${styles[theme]}`}>
             <FontAwesomeIcon icon={faSass} />
+            <p>Text</p>
           </div>
           <div className={`${styles.gridItem} ${styles[theme]}`}>
             <FontAwesomeIcon icon={faNodeJs} />
+            <p>Text</p>
           </div>
           <div className={`${styles.gridItem} ${styles[theme]}`}>
             <FontAwesomeIcon icon={faCss3} />
+            <p>Text</p>
           </div>
           <div className={`${styles.gridItem} ${styles[theme]}`}>
             <FontAwesomeIcon icon={faHtml5} />
+            <p>Text</p>
           </div>
           <div className={`${styles.gridItem} ${styles[theme]}`}>
             <FontAwesomeIcon icon={faAws} />
+            <p>Text</p>
           </div>
         </div>
       </div>

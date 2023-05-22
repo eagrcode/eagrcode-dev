@@ -32,72 +32,47 @@ export default function ProjectCard({ title, image, text, alt, gitHubUrl, liveUr
   const [scrollRight, setScrollRight] = useState<boolean>(false);
   const [width, setWidth] = useState<number>(0);
 
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  function handleScrollRight() {
-    setScrollRight((prev) => !prev);
+  function handleRightClick() {
+    setScrollRight(true);
   }
-
-  // useEffect(() => {
-  //   if (imgRef?.current?.clientWidth) {
-  //     setWidth(imgRef?.current?.clientWidth);
-  //   }
-  // }, [width]);
-
-  useEffect(() => {
-    const element = imgRef?.current;
-
-    if (!element) return;
-
-    const observer = new ResizeObserver(() => {
-      // 👉 Do something when the element is resized
-      setWidth(element.clientWidth);
-    });
-
-    observer.observe(element);
-    return () => {
-      // Cleanup the observer by unobserving all elements
-      observer.disconnect();
-    };
-  }, []);
 
   return (
     <div className={styles.project}>
       <div className={styles.swiper}>
-        <div
-          className={
-            scrollRight ? `${styles.swiperInner} ${styles.scrollRight}` : styles.swiperInner
-          }
-        >
-          {/* <div className={`${styles.navigation} ${styles.left}`} onClick={handleScrollRight}>
-            <button>Prev</button>
-          </div> */}
-
-          <Image
-            src={image}
-            alt={alt}
-            placeholder="blur"
-            style={{ height: "auto", width: "85%" }}
-            ref={imgRef}
-          />
-          <Image
-            src={image}
-            alt={alt}
-            placeholder="blur"
-            style={{ height: "auto", width: "85%" }}
-          />
-          <Image
-            src={image}
-            alt={alt}
-            placeholder="blur"
-            style={{ height: "auto", width: "85%" }}
-          />
-          <div className={`${styles.navigation} ${styles.right}`} onClick={handleScrollRight}>
-            <button>Next</button>
+        <div className={styles.swiperInner}>
+          <div className={styles.img}>
+            <Image
+              className={scrollRight ? `${styles.scrollRight}` : ""}
+              src={image}
+              alt={alt}
+              placeholder="blur"
+              style={{ height: "auto", width: "100%" }}
+            />
+          </div>
+          <div className={styles.img}>
+            <Image
+              className={scrollRight ? `${styles.scrollRight}` : ""}
+              id="slide-2"
+              src={image}
+              alt={alt}
+              placeholder="blur"
+              style={{ height: "auto", width: "100%" }}
+            />
+          </div>
+          <div className={styles.img}>
+            <Image
+              className={scrollRight ? `${styles.scrollRight}` : ""}
+              src={image}
+              alt={alt}
+              placeholder="blur"
+              style={{ height: "auto", width: "100%" }}
+            />
           </div>
         </div>
+        {/* <div onClick={handleRightClick} className={`${styles.navigation} ${styles.right}`}>
+          <button>Next</button>
+        </div> */}
       </div>
-
       <div className={styles.titleContainer}>
         <h3 className={theme}>{title}</h3>
         <div className={styles.iconContainer}>

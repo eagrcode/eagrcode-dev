@@ -105,3 +105,28 @@
   // margin: auto 0;
   opacity: 0.2;
 }
+
+.iconContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon {
+  color: var(--text-color-dark);
+  font-size: 2rem;
+  cursor: pointer;
+
+  transition: all ease-out 0.1s;
+
+  &:hover {
+    transform: scale(1.1);
+
+    &.dark {
+      color: var(--accent-color-dark);
+    }
+
+    &.light {
+      color: var(--accent-color-light);
+    }
+  }
+}

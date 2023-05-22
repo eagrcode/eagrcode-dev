@@ -12,9 +12,11 @@ export default function Contact() {
   const { theme } = useTheme();
 
   return (
-    <section id="scroll-to-contact" className={styles.contactSection}>
+    <section className={styles.contactSection}>
       <div className={styles.contactWrapper}>
-        <h2 className={theme}>Contact Me</h2>
+        <h2 id="scroll-to-contact" className={theme}>
+          Contact Me
+        </h2>
         <ContactForm />
       </div>
     </section>

@@ -54,7 +54,7 @@
 .button {
   width: 100%;
   border-radius: 3px;
-  background-color: var(--accent-color);
+
   border: transparent;
   font-size: 1.2rem;
   font-weight: 600;
@@ -63,7 +63,15 @@
   cursor: pointer;
 
   &:hover {
-    background-color: hsla(50, 90%, 80%);
+    filter: brightness(80%);
+  }
+
+  &.dark {
+    background-color: var(--accent-color-dark);
+  }
+
+  &.light {
+    background-color: var(--accent-color-light);
   }
 }
 

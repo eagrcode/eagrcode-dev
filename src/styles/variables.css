@@ -13,7 +13,8 @@
   --text-color-dark: hsl(250, 15%, 65%);
   --header-color-dark: hsl(250, 20%, 90%);
   --nav-bg-color-dark: hsl(250, 50%, 7%);
-  --accent-color-dark: hsl(50, 50%, 80%);
+  /* --accent-color-dark: hsl(50, 50%, 80%); */
+  --accent-color-dark: hsl(290, 50%, 70%);
 
   /* light theme */
   --bg-color-light: hsl(250, 10%, 90%);
@@ -21,4 +22,5 @@
   --header-color-light: hsl(250, 20%, 30%);
   --nav-bg-color-light: hsl(250, 20%, 80%);
   --accent-color-light: hsl(240, 90%, 40%);
+  --accent-color-light: hsl(175, 80%, 30%);
 }
