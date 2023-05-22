@@ -1,10 +1,8 @@
 :root {
   --nav-height: 4rem;
-  --sidebar-width: 163.4px;
 
   /* COLOURS */
-  /* 
-  --accent-color: hsl(190, 100%, 70%); */
+  /* --accent-color: hsl(190, 100%, 70%); */
   /* --accent-color: hsl(300, 100%, 75%); */
   /* --accent-color: hsl(50, 50%, 80%); */
 
@@ -18,7 +16,7 @@
 
   /* light theme */
   --bg-color-light: hsl(250, 10%, 90%);
-  --text-color-light: hsl(250, 20%, 60%);
+  --text-color-light: hsl(250, 20%, 40%);
   --header-color-light: hsl(250, 20%, 30%);
   --nav-bg-color-light: hsl(250, 20%, 80%);
   --accent-color-light: hsl(240, 90%, 40%);

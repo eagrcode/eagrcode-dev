@@ -7,6 +7,9 @@ import { useTheme } from "@/context/ThemeProvider";
 // formspree
 import { useForm, ValidationError } from "@formspree/react";
 
+// react spinners
+import PulseLoader from "react-spinners/PulseLoader";
+
 export default function ContactForm() {
   // initial state
   const { theme } = useTheme();
@@ -33,6 +36,7 @@ export default function ContactForm() {
           type="text"
           name="First name"
           required
+          disabled={state.submitting}
         />
       </div>
       <div>
@@ -45,6 +49,7 @@ export default function ContactForm() {
           type="text"
           name="Last name"
           required
+          disabled={state.submitting}
         />
       </div>
       <div>
@@ -58,6 +63,7 @@ export default function ContactForm() {
           name="Email"
           required
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          disabled={state.submitting}
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
       </div>
@@ -71,6 +77,7 @@ export default function ContactForm() {
           name="Message"
           required
           minLength={10}
+          disabled={state.submitting}
         />
         <ValidationError prefix="Message" field="message" errors={state.errors} />
       </div>
@@ -80,7 +87,7 @@ export default function ContactForm() {
         type="submit"
         disabled={state.submitting}
       >
-        Submit
+        {state.submitting ? <PulseLoader color="hsl(250, 15%, 10%)" size={8} /> : "Submit"}
       </button>
     </form>
   );
