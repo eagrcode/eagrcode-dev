@@ -18,7 +18,7 @@ import { useTheme } from "@/context/ThemeProvider";
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faLightbulb, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   // initial state
@@ -87,7 +87,7 @@ export default function Navbar() {
           <div className={styles.toggle}>
             <FontAwesomeIcon
               className={`${styles.icon} ${styles[theme]}`}
-              icon={theme === "dark" ? faLightbulb : faMoon}
+              icon={theme === "dark" ? faSun : faMoon}
               onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}
             />
           </div>

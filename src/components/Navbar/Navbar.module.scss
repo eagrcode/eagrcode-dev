@@ -127,6 +127,7 @@
     align-items: center;
     width: fit-content;
     height: 100%;
+    gap: 1rem;
   }
 }
 
@@ -162,6 +163,10 @@
 
   &.light {
     color: var(--text-color-light);
+  }
+
+  @media (min-width: 900px) {
+    padding: 0;
   }
 }
 
