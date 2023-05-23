@@ -6,20 +6,23 @@ import ProjectCard from "./ProjectCard/ProjectCard";
 
 // context
 import { useTheme } from "@/context/ThemeProvider";
+import { useContextProvider } from "@/context/ContextProvider";
 
 // images
 import supatask from "@/assets/images/supatask-thumbnail.png";
 import emdb from "@/assets/images/emdb-thumbnail.png";
 import moongazer from "@/assets/images/moongazer-thumbnail.png";
-import emdbmob from "@/assets/images/emdb-mobile-hero.jpg";
 
 export default function Projects() {
   // initial state
   const { theme } = useTheme();
+  const { isOpen } = useContextProvider();
 
   return (
     <section className={styles.projectsSection}>
-      <div className={styles.projectsWrapper}>
+      <div
+        className={isOpen ? `${styles.projectsWrapper} ${styles.isOpen}` : styles.projectsWrapper}
+      >
         <h2 id="scroll-to-projects" className={theme}>
           Projects
         </h2>

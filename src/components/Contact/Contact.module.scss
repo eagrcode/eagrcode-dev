@@ -11,6 +11,10 @@
   width: 100%;
   max-width: 500px;
   gap: 1rem;
+
+  &.isOpen {
+    filter: blur(8px);
+  }
 }
 
 .emailLink {

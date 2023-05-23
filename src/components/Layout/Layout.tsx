@@ -11,6 +11,7 @@ import { useTheme } from "@/context/ThemeProvider";
 import noise from "@/assets/images/noise.png";
 
 export default function NavLayout({ children }: { children: React.ReactNode }) {
+  // initial state
   const { theme } = useTheme();
 
   return (

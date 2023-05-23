@@ -15,7 +15,6 @@ import { useTheme } from "@/context/ThemeProvider";
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 // images
 import HeroImg from "@/assets/images/hero-img.png";
