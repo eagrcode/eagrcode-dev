@@ -15,6 +15,7 @@ import { useTheme } from "@/context/ThemeProvider";
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 // images
 import HeroImg from "@/assets/images/hero-img.png";
@@ -36,7 +37,8 @@ export default function Hero() {
         <p className={`${styles.hi} ${styles[theme]}`}>Hi, my name is</p>
         <h1 className={`${styles.h1} ${styles[theme]}`}>Elliot Robinson</h1>
         <p className={`${styles.p} ${theme}`}>
-          I'm a Web Developer, with a passion for creating elegant and responsive web apps
+          I'm a Front-End Developer, with a passion for creating elegant and responsive Web
+          Applications
         </p>
         <HeroBtn />
         <div className={styles.iconContainer}>

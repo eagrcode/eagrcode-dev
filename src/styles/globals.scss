@@ -4,15 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
-
-  @media (min-width: 900px) {
-    // scroll-padding-top: 1rem;
-  }
 }
 
 html {
   letter-spacing: 0.8px;
+  scroll-behavior: smooth;
   scroll-padding-top: var(--nav-height);
 }
 

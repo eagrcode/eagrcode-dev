@@ -12,3 +12,14 @@
   max-width: 500px;
   gap: 1rem;
 }
+
+.emailLink {
+  &.dark {
+    color: var(--accent-color-dark);
+  }
+  &.light {
+    color: var(--accent-color-light);
+  }
+
+  text-decoration: underline;
+}

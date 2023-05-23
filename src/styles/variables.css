@@ -19,6 +19,6 @@
   --text-color-light: hsl(250, 20%, 40%);
   --header-color-light: hsl(250, 20%, 30%);
   --nav-bg-color-light: hsl(250, 20%, 80%);
-  --accent-color-light: hsl(240, 90%, 40%);
-  --accent-color-light: hsl(175, 80%, 30%);
+  --accent-color-light: hsl(260, 100%, 40%);
+  /* --accent-color-light: hsl(175, 50%, 30%); */
 }
