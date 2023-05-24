@@ -8,6 +8,9 @@ import ProjectCard from "./ProjectCard/ProjectCard";
 import { useTheme } from "@/context/ThemeProvider";
 import { useContextProvider } from "@/context/ContextProvider";
 
+// projects data
+import { projectsData } from "@/assets/data/projectsData";
+
 // images
 import supatask from "@/assets/images/supatask-thumbnail.png";
 import emdb from "@/assets/images/emdb-thumbnail.png";
@@ -18,6 +21,8 @@ export default function Projects() {
   const { theme } = useTheme();
   const { isOpen } = useContextProvider();
 
+  console.log(projectsData);
+
   return (
     <section className={styles.projectsSection}>
       <div
@@ -27,48 +32,25 @@ export default function Projects() {
           Projects
         </h2>
         <div className={styles.projectGrid}>
-          <ProjectCard
-            title={"EMDB"}
-            image={emdb}
-            alt={"emdb-project-thumbnail"}
-            gitHubUrl={"https://github.com/eagrcode/EMDB"}
-            liveUrl={"https://emdb-eagrcode.netlify.app"}
-            text={
-              "A full-stack web app featuring user authentication, developed with React and Supabase."
-            }
-          />
+          {projectsData.map((project) => (
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              links={project.links}
+              tags={project.tags}
+              images={project.images}
+              alt={project.alt}
+            />
+          ))}
+
+          {/* <div className={styles.divider}></div>
+     
           <div className={styles.divider}></div>
-          <ProjectCard
-            title={"Supatask"}
-            image={supatask}
-            alt={"supatask-project-thumbnail"}
-            liveUrl={"https://supatask.vercel.app"}
-            gitHubUrl={"https://github.com/eagrcode/supatask"}
-            text={
-              "A full-stack web app featuring user authentication, developed with React and Supabase."
-            }
-          />
+       
           <div className={styles.divider}></div>
-          <ProjectCard
-            title={"MoonGazer Ceremonies"}
-            image={moongazer}
-            alt={"moongazer-project-thumbnail"}
-            gitHubUrl={"https://github.com/eagrcode/moongazer-ceremonies"}
-            liveUrl={"https://moongazerceremonies.co.uk"}
-            text={"Business page for Lincolnshire based Celebrant."}
-          />
-          <div className={styles.divider}></div>
-          <ProjectCard
-            title={"Eagrcode"}
-            image={supatask}
-            alt={"eagrcode-project-thumbnail"}
-            gitHubUrl={""}
-            liveUrl={""}
-            text={
-              "A full-stack web app featuring user authentication, developed with React and Supabase."
-            }
-          />
-          <div className={styles.divider}></div>
+       
+          <div className={styles.divider}></div> */}
         </div>
       </div>
     </section>

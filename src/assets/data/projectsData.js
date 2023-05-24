@@ -1,4 +1,6 @@
-export default projectsData = [
+import emdbThumb from "@/assets/images/emdb-thumbnail.png";
+
+export const projectsData = [
   {
     id: 0,
     title: "EMDB",
@@ -15,11 +17,13 @@ export default projectsData = [
       4: "ViteJS",
       5: "Netlify",
     },
+
     images: {
-      1: "@/assets/images/emdb-thumbnail.png",
-      2: "@/assets/images/emdb-thumbnail.png",
-      3: "@/assets/images/emdb-thumbnail.png",
+      1: emdbThumb,
+      2: emdbThumb,
+      3: emdbThumb,
     },
+    alt: "EMDB thumbnail",
   },
 
   {
@@ -38,11 +42,13 @@ export default projectsData = [
       4: "Vercel",
       5: "Auth",
     },
+
     images: {
-      1: "@/assets/images/emdb-thumbnail.png",
-      2: "@/assets/images/emdb-thumbnail.png",
-      3: "@/assets/images/emdb-thumbnail.png",
+      1: emdbThumb,
+      2: emdbThumb,
+      3: emdbThumb,
     },
+    alt: "supatask thumbnail",
   },
 
   {
@@ -59,11 +65,13 @@ export default projectsData = [
       3: "Netlify",
       4: "Contact form",
     },
+
     images: {
-      1: "@/assets/images/emdb-thumbnail.png",
-      2: "@/assets/images/emdb-thumbnail.png",
-      3: "@/assets/images/emdb-thumbnail.png",
+      1: emdbThumb,
+      2: emdbThumb,
+      3: emdbThumb,
     },
+    alt: "moongazer ceremonies thumbnail",
   },
 
   {
@@ -79,10 +87,12 @@ export default projectsData = [
       2: "Vercel",
       3: "Contact form",
     },
+
     images: {
-      1: "@/assets/images/emdb-thumbnail.png",
-      2: "@/assets/images/emdb-thumbnail.png",
-      3: "@/assets/images/emdb-thumbnail.png",
+      1: emdbThumb,
+      2: emdbThumb,
+      3: emdbThumb,
     },
+    alt: "eagrcode.dev thumbnail",
   },
 ];
