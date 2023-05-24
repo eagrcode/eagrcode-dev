@@ -1,4 +1,6 @@
-import emdbThumb from "@/assets/images/emdb-thumbnail.png";
+import emdbThumb1 from "@/assets/images/emdb-thumbnail-1.png";
+import emdbThumb2 from "@/assets/images/emdb-thumbnail-2.png";
+import emdbThumb3 from "@/assets/images/emdb-thumbnail-3.png";
 
 export const projectsData = [
   {
@@ -19,9 +21,9 @@ export const projectsData = [
     },
 
     images: {
-      1: emdbThumb,
-      2: emdbThumb,
-      3: emdbThumb,
+      1: emdbThumb1,
+      2: emdbThumb2,
+      3: emdbThumb3,
     },
     alt: "EMDB thumbnail",
   },
@@ -44,9 +46,9 @@ export const projectsData = [
     },
 
     images: {
-      1: emdbThumb,
-      2: emdbThumb,
-      3: emdbThumb,
+      1: emdbThumb1,
+      2: emdbThumb2,
+      3: emdbThumb3,
     },
     alt: "supatask thumbnail",
   },
@@ -67,9 +69,9 @@ export const projectsData = [
     },
 
     images: {
-      1: emdbThumb,
-      2: emdbThumb,
-      3: emdbThumb,
+      1: emdbThumb1,
+      2: emdbThumb2,
+      3: emdbThumb3,
     },
     alt: "moongazer ceremonies thumbnail",
   },
@@ -89,9 +91,9 @@ export const projectsData = [
     },
 
     images: {
-      1: emdbThumb,
-      2: emdbThumb,
-      3: emdbThumb,
+      1: emdbThumb1,
+      2: emdbThumb2,
+      3: emdbThumb3,
     },
     alt: "eagrcode.dev thumbnail",
   },
