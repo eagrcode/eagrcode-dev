@@ -33,24 +33,19 @@ export default function Projects() {
         </h2>
         <div className={styles.projectGrid}>
           {projectsData.map((project) => (
-            <ProjectCard
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              links={project.links}
-              tags={project.tags}
-              images={project.images}
-              alt={project.alt}
-            />
+            <>
+              <ProjectCard
+                key={project.id}
+                title={project.title}
+                description={project.description}
+                links={project.links}
+                tags={project.tags}
+                images={project.images}
+                alt={project.alt}
+              />
+              <div className={styles.divider}></div>
+            </>
           ))}
-
-          {/* <div className={styles.divider}></div>
-     
-          <div className={styles.divider}></div>
-       
-          <div className={styles.divider}></div>
-       
-          <div className={styles.divider}></div> */}
         </div>
       </div>
     </section>

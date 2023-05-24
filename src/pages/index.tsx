@@ -1,6 +1,5 @@
 // next
 import Head from "next/head";
-import localFont from "next/font/local";
 
 // styles
 import styles from "@/styles/Home.module.scss";
@@ -10,10 +9,6 @@ import Hero from "@/components/Hero/Hero";
 import About from "@/components/About/About";
 import Projects from "@/components/Projects/Projects";
 import Contact from "@/components/Contact/Contact";
-
-// context
-import { useContextProvider } from "@/context/ContextProvider";
-import { useTheme } from "@/context/ThemeProvider";
 
 export default function Home() {
   return (
