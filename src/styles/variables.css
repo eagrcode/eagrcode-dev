@@ -7,10 +7,10 @@
   /* --accent-color: hsl(50, 50%, 80%); */
 
   /* dark theme */
-  --background-color-dark: hsl(250, 45%, 12%);
+  --background-color-dark: hsl(260, 45%, 12%);
   --text-color-dark: hsl(250, 15%, 65%);
   --header-color-dark: hsl(250, 20%, 90%);
-  --nav-bg-color-dark: hsl(250, 50%, 7%);
+  --nav-bg-color-dark: hsl(260, 50%, 7%);
   /* --accent-color-dark: hsl(50, 50%, 80%); */
   --accent-color-dark: hsl(290, 50%, 70%);
 
