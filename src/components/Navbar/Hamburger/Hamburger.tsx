@@ -2,7 +2,7 @@
 import styles from "./Hamburger.module.scss";
 
 // react
-import { Dispatch, SetStateAction, useEffect } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 // context
 import { useTheme } from "@/context/ThemeProvider";
@@ -21,15 +21,6 @@ export default function Hamburger({ isOpen, setIsOpen }: props) {
   function handleClick() {
     setIsOpen(!isOpen);
   }
-
-  // disable body scroll when isOpen
-  useEffect(() => {
-    if (isOpen) {
-      document.body.className = "noScroll";
-    } else {
-      document.body.className = "";
-    }
-  }, [isOpen]);
 
   return (
     <button className={styles.button} onClick={handleClick}>

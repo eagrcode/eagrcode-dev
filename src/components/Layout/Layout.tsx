@@ -7,9 +7,6 @@ import styles from "./Layout.module.scss";
 // context
 import { useTheme } from "@/context/ThemeProvider";
 
-// image
-import noise from "@/assets/images/noise.png";
-
 export default function NavLayout({ children }: { children: React.ReactNode }) {
   // initial state
   const { theme } = useTheme();

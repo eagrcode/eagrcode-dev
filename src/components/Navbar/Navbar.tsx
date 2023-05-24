@@ -8,9 +8,6 @@ import ResumeBtn from "@/components/ResumeBtn/ResumeBtn";
 // next
 import Link from "next/link";
 
-// react
-import { useState } from "react";
-
 // context
 import { useContextProvider } from "@/context/ContextProvider";
 import { useTheme } from "@/context/ThemeProvider";
@@ -23,7 +20,6 @@ import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 export default function Navbar() {
   // initial state
   const { isOpen, setIsOpen } = useContextProvider();
-  const [isScroll, setIsScroll] = useState(false);
   const { theme, setTheme } = useTheme();
 
   return (
