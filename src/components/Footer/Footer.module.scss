@@ -1,0 +1,29 @@
+.footer {
+  text-align: center;
+  padding: 1rem;
+
+  &.dark {
+    background-color: var(--background-color-dark);
+  }
+
+  &.light {
+    background-color: var(--bg-color-light);
+  }
+
+  p {
+    font-family: "SF Mono", serif;
+    font-size: 0.8rem;
+  }
+
+  .link {
+    font-size: 0.8rem;
+
+    &.dark {
+      color: var(--accent-color-dark);
+    }
+
+    &.light {
+      color: var(--accent-color-light);
+    }
+  }
+}

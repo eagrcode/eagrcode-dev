@@ -1,5 +1,6 @@
 // components
 import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 // styles
 import styles from "./Layout.module.scss";
@@ -23,6 +24,7 @@ export default function NavLayout({ children }: { children: React.ReactNode }) {
       >
         {children}
       </main>
+      <Footer />
     </div>
   );
 }
