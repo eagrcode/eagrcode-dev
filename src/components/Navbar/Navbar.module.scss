@@ -213,7 +213,13 @@
 .toggle {
   justify-self: flex-end;
 
+  padding: 1rem;
+
   &:hover {
     color: var(--text-color-dark);
+  }
+
+  @media (min-width: 900px) {
+    padding: 0;
   }
 }
