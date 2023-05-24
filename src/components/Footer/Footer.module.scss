@@ -18,6 +18,10 @@
   .link {
     font-size: 0.8rem;
 
+    &:hover {
+      filter: brightness(80%);
+    }
+
     &.dark {
       color: var(--accent-color-dark);
     }
