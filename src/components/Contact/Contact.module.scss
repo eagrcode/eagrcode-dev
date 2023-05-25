@@ -15,6 +15,18 @@
   &.isOpen {
     filter: blur(8px);
   }
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+    max-width: 100%;
+  }
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
 }
 
 .emailLink {
