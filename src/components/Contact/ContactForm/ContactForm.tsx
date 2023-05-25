@@ -27,7 +27,7 @@ export default function ContactForm() {
       method="POST"
     >
       <div>
-        <label className={`${styles.label}${styles[theme]}`} htmlFor="firstName">
+        <label className={`${styles.label} ${styles[theme]}`} htmlFor="firstName">
           First name
         </label>
         <input
