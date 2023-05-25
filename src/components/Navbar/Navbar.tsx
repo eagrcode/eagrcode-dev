@@ -80,13 +80,13 @@ export default function Navbar() {
               </Link>
             </li>
           </ul> */}
-          <div className={styles.toggle}>
+          <button title="Toggle theme" className={styles.toggle}>
             <FontAwesomeIcon
               className={`${styles.icon} ${styles[theme]}`}
               icon={theme === "dark" ? faSun : faMoon}
               onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}
             />
-          </div>
+          </button>
         </div>
       </nav>
     </header>

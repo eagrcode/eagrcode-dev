@@ -179,12 +179,6 @@
     position: relative;
   }
 
-  // a:hover {
-  //   .tooltip {
-  //     visibility: visible;
-  //   }
-  // }
-
   @media (min-width: 768px) {
     display: flex;
   }
@@ -198,8 +192,6 @@
   transition: all ease-out 0.1s;
 
   &:hover {
-    transform: scale(1.1);
-
     &.dark {
       color: var(--accent-color-dark);
     }
@@ -212,6 +204,8 @@
 
 .toggle {
   justify-self: flex-end;
+  background-color: transparent;
+  border: transparent;
 
   padding: 1rem;
 
