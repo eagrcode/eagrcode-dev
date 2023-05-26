@@ -5,27 +5,11 @@
   width: 100%;
   backdrop-filter: blur(10px);
 
-  // .dark {
-  //   background-color: hsla(250, 50%, 12%, 0.7);
-  // }
-
-  // .light {
-  //   background-color: hsla(250, 50%, 90%, 0.7);
-  // }
-
   @media (min-width: 768px) {
     top: 0;
     width: 100%;
     padding: 0;
     border-right: solid 1px rgba(120, 120, 120, 0.2);
-
-    // &.dark {
-    //   background-color: var(--nav-bg-color-dark);
-    // }
-
-    // &.light {
-    //   background-color: var(--nav-bg-color-light);
-    // }
   }
 }
 
@@ -43,7 +27,7 @@
   }
 
   @media (min-width: 1200px) {
-    padding: 0 5rem;
+    padding: 0 8rem;
   }
 }
 

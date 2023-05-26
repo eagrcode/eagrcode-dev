@@ -11,10 +11,13 @@ import Link from "next/link";
 // context
 import { useTheme } from "@/context/ThemeProvider";
 
+// components
+import Swiper from "./Swiper/Swiper";
+
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft, faChevronRight, faLink } from "@fortawesome/free-solid-svg-icons";
 
 // prop types
 type props = {
@@ -39,23 +42,54 @@ type props = {
 export default function ProjectCard({ title, description, links, tags, images, alt }: props) {
   // initial state
   const { theme } = useTheme();
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  // left click
+  function swipeLeft() {
+    if (activeIndex > 0) {
+      setActiveIndex((prev) => prev - 1);
+    }
+  }
+
+  // right click
+  function swipeRight() {
+    if (activeIndex < Object.keys(images).length - 1) {
+      setActiveIndex((prev) => prev + 1);
+    }
+  }
+
+  // choose image from dots
+  function updateIndex(index: number) {
+    if (index != activeIndex) {
+      setActiveIndex(index);
+    }
+  }
 
   return (
     <div className={styles.project}>
-      <div className={styles.swiper}>
-        <div className={styles.swiperInner}>
-          <div className={styles.img}>
-            <Image alt={alt} src={images[1]} style={{ height: "auto", width: "100%" }} />
-          </div>
-          <div className={styles.img}>
-            <Image alt={alt} src={images[2]} style={{ height: "auto", width: "100%" }} />
-          </div>
-          <div className={styles.img}>
-            <Image alt={alt} src={images[3]} style={{ height: "auto", width: "100%" }} />
-          </div>
-        </div>
+      <Swiper images={images} alt={alt} activeIndex={activeIndex} />
+      <div className={styles.swiperNavContainer}>
+        <FontAwesomeIcon
+          className={`${styles.swiperNav} ${styles[theme]}`}
+          icon={faChevronLeft}
+          onClick={swipeLeft}
+        />
+        {Object.keys(images).map((image, index) => (
+          <button
+            onClick={() => updateIndex(index)}
+            className={
+              index === activeIndex
+                ? `${styles.dots} ${styles[theme]} ${styles.active}`
+                : `${styles.dots} ${styles[theme]}`
+            }
+          ></button>
+        ))}
+        <FontAwesomeIcon
+          className={`${styles.swiperNav} ${styles[theme]}`}
+          icon={faChevronRight}
+          onClick={swipeRight}
+        />
       </div>
-
       <div className={styles.titleContainer}>
         <h3 className={theme}>{title}</h3>
         <div className={styles.iconContainer}>

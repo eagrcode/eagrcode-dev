@@ -1,0 +1,29 @@
+.swiper {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.swiperInner {
+  display: flex;
+  align-items: center;
+  // overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+
+  transition: all ease-in 0.3s;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .img {
+    min-width: 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+    img {
+      border-radius: 8px;
+    }
+  }
+}
