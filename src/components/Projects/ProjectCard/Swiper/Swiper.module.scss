@@ -1,15 +1,21 @@
 .swiper {
   position: relative;
   display: flex;
-  overflow: hidden;
+
+  @media (min-width: 768px) {
+    overflow: hidden;
+  }
 }
 
 .swiperInner {
   display: flex;
+  // gap: 1rem;
   align-items: center;
-  // overflow-x: auto;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
   overscroll-behavior-x: contain;
+
+  // transform: translate(-calc((1 * 100%)));
 
   transition: all ease-in 0.3s;
 
@@ -25,5 +31,9 @@
     img {
       border-radius: 8px;
     }
+  }
+
+  @media (min-width: 768px) {
+    overflow-x: initial;
   }
 }

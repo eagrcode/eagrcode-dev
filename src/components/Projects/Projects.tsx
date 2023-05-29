@@ -10,18 +10,12 @@ import { useContextProvider } from "@/context/ContextProvider";
 
 // projects data
 import { projectsData } from "@/assets/data/projectsData";
-
-// images
-import supatask from "@/assets/images/supatask-thumbnail.png";
-import emdb from "@/assets/images/emdb-thumbnail.png";
-import moongazer from "@/assets/images/moongazer-thumbnail.png";
+import React from "react";
 
 export default function Projects() {
   // initial state
   const { theme } = useTheme();
   const { isOpen } = useContextProvider();
-
-  console.log(projectsData);
 
   return (
     <section className={styles.projectsSection}>
@@ -32,10 +26,9 @@ export default function Projects() {
           Projects
         </h2>
         <div className={styles.projectGrid}>
-          {projectsData.map((project) => (
-            <>
+          {projectsData.map((project, index) => (
+            <React.Fragment key={index}>
               <ProjectCard
-                key={project.id}
                 title={project.title}
                 description={project.description}
                 links={project.links}
@@ -44,7 +37,7 @@ export default function Projects() {
                 alt={project.alt}
               />
               <div className={styles.divider}></div>
-            </>
+            </React.Fragment>
           ))}
         </div>
       </div>

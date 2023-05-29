@@ -11,6 +11,7 @@
   align-items: center;
 
   .swiperNav {
+    display: none;
     font-size: 1.5rem;
     cursor: pointer;
     margin: 0 1rem;
@@ -25,6 +26,10 @@
 
     &.light {
       color: var(--text-color-light);
+    }
+
+    @media (min-width: 768px) {
+      display: block;
     }
   }
 
