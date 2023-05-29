@@ -20,6 +20,7 @@
     flex-direction: row;
     max-width: 100%;
     justify-content: space-between;
+    gap: 3rem;
   }
 }
 
@@ -36,6 +37,10 @@
   }
   &.light {
     color: var(--accent-color-light);
+  }
+
+  &:hover {
+    filter: brightness(80%);
   }
 
   text-decoration: underline;

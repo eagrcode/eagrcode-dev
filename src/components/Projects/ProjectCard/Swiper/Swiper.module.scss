@@ -1,6 +1,8 @@
 .swiper {
   position: relative;
   display: flex;
+  border-radius: 8px;
+  box-shadow: hsla(250, 10%, 10%, 0.3) 0px 8px 24px;
 
   @media (min-width: 768px) {
     overflow: hidden;
@@ -15,6 +17,7 @@
   scroll-snap-type: x mandatory;
   overscroll-behavior-x: contain;
 
+  border-radius: 8px;
   // transform: translate(-calc((1 * 100%)));
 
   transition: all ease-in 0.3s;
@@ -24,9 +27,10 @@
   }
 
   .img {
-    min-width: 100%;
+    width: 100%;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+    flex-shrink: 0;
 
     img {
       border-radius: 8px;

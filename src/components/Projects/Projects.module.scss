@@ -27,6 +27,7 @@
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
     max-width: fit-content;
+    gap: 3rem;
   }
 }
 
