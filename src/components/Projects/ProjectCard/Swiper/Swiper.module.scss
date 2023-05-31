@@ -1,26 +1,28 @@
 .swiper {
   position: relative;
   display: flex;
-  border-radius: 8px;
   box-shadow: hsla(250, 10%, 10%, 0.3) 0px 8px 24px;
+  border-radius: 2px;
+  overflow: hidden;
 
-  @media (min-width: 768px) {
-    overflow: hidden;
+  &.dark {
+    border: solid 5px hsla(260, 15%, 60%, 0.2);
+  }
+
+  &.light {
+    border: solid 5px hsla(260, 20%, 40%, 0.6);
   }
 }
 
 .swiperInner {
   display: flex;
-  // gap: 1rem;
   align-items: center;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  overscroll-behavior-x: contain;
 
-  border-radius: 8px;
-  // transform: translate(-calc((1 * 100%)));
+  // overflow: auto;
+  // scroll-snap-type: x mandatory;
+  // overscroll-behavior-x: contain;
 
-  transition: all ease-in 0.3s;
+  transition: all ease-out 0.5s;
 
   &::-webkit-scrollbar {
     display: none;
@@ -28,16 +30,10 @@
 
   .img {
     width: 100%;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
     flex-shrink: 0;
 
     img {
-      border-radius: 8px;
+      display: block;
     }
-  }
-
-  @media (min-width: 768px) {
-    overflow-x: initial;
   }
 }

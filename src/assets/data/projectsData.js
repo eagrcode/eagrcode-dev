@@ -22,8 +22,8 @@ export const projectsData = [
 
     images: {
       1: emdbThumb1,
-      2: emdbThumb2,
-      3: emdbThumb3,
+      2: emdbThumb1,
+      3: emdbThumb1,
     },
     alt: "EMDB thumbnail",
   },

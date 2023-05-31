@@ -43,6 +43,7 @@ export default function ProjectCard({ title, description, links, tags, images, a
   // initial state
   const { theme } = useTheme();
   const [activeIndex, setActiveIndex] = useState(0);
+  const [mobActiveIndex, setMobActiveIndex] = useState(0);
 
   // left click
   function swipeLeft() {
@@ -67,7 +68,7 @@ export default function ProjectCard({ title, description, links, tags, images, a
 
   return (
     <div className={styles.project}>
-      <Swiper images={images} alt={alt} activeIndex={activeIndex} />
+      <Swiper images={images} alt={alt} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
       <div className={styles.swiperNavContainer}>
         <FontAwesomeIcon
           className={`${styles.swiperNav} ${styles[theme]}`}
@@ -80,8 +81,8 @@ export default function ProjectCard({ title, description, links, tags, images, a
             onClick={() => updateIndex(index)}
             className={
               index === activeIndex
-                ? `${styles.dots} ${styles[theme]} ${styles.active}`
-                : `${styles.dots} ${styles[theme]}`
+                ? `${styles.dots} ${styles.desktopDots} ${styles[theme]} ${styles.active}`
+                : `${styles.dots} ${styles.desktopDots} ${styles[theme]}`
             }
           ></button>
         ))}

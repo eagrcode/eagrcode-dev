@@ -15,16 +15,20 @@
     cursor: pointer;
     margin: 0 1rem;
 
-    &:hover {
-      filter: brightness(150%);
-    }
-
     &.dark {
       color: var(--text-color-dark);
+
+      &:hover {
+        filter: brightness(150%);
+      }
     }
 
     &.light {
       color: var(--text-color-light);
+
+      &:hover {
+        filter: brightness(10%);
+      }
     }
 
     @media (min-width: 768px) {
@@ -40,20 +44,28 @@
     border: transparent;
     outline: transparent;
 
-    &:hover {
-      filter: brightness(150%);
-    }
-
-    &.active {
-      filter: brightness(150%);
-    }
-
     &.dark {
       background-color: var(--text-color-dark);
+
+      &:hover {
+        filter: brightness(150%);
+      }
+
+      &.active {
+        filter: brightness(150%);
+      }
     }
 
     &.light {
       background-color: var(--text-color-light);
+
+      &:hover {
+        filter: brightness(10%);
+      }
+
+      &.active {
+        filter: brightness(10%);
+      }
     }
   }
 }
@@ -86,42 +98,6 @@
 
     &:hover {
       color: var(--accent-color-light);
-    }
-  }
-}
-
-.navigation {
-  display: none;
-
-  @media (min-width: 900px) {
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: calc(15% - 10px);
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--background-color-dark);
-    opacity: 0.5;
-
-    &.left {
-      left: 0;
-    }
-
-    &.right {
-      right: 0;
-    }
-
-    button {
-      display: none;
-      padding: 5px;
-      cursor: pointer;
-    }
-
-    &:hover {
-      button {
-        display: block;
-      }
     }
   }
 }
