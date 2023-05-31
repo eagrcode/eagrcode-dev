@@ -28,55 +28,65 @@ export default function About() {
           <h2 id="scroll-to-about" className={theme}>
             About Me
           </h2>
-          <div className={styles.aboutText}>
-            <p className={theme}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ex impedit deserunt,
-              eius esse fugiat itaque sed sunt quidem consequatur debitis laudantium, repellendus
-              accusamus reprehenderit ducimus provident ut corrupti architecto?
-            </p>
-            <p className={theme}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ex impedit deserunt,
-              eius esse fugiat itaque sed sunt quidem consequatur debitis laudantium, repellendus
-              accusamus reprehenderit ducimus provident ut corrupti architecto?
-            </p>
-          </div>
-        </div>
-        <div className={styles.techGrid}>
-          <div className={`${styles.gridItem} ${styles[theme]}`}>
-            <FontAwesomeIcon icon={faCss3} />
-            <p>Text</p>
-          </div>
-          <div className={`${styles.gridItem} ${styles[theme]}`}>
-            <FontAwesomeIcon icon={faHtml5} />
-            <p>Text</p>
-          </div>
-          <div className={`${styles.gridItem} ${styles[theme]}`}>
-            <FontAwesomeIcon icon={faAws} />
-            <p>Text</p>
-          </div>
-          <div className={`${styles.gridItem} ${styles[theme]}`}>
-            <FontAwesomeIcon icon={faReact} />
-            <p>Text</p>
-          </div>
-          <div className={`${styles.gridItem} ${styles[theme]}`}>
-            <FontAwesomeIcon icon={faSass} />
-            <p>Text</p>
-          </div>
-          <div className={`${styles.gridItem} ${styles[theme]}`}>
-            <FontAwesomeIcon icon={faNodeJs} />
-            <p>Text</p>
-          </div>
-          <div className={`${styles.gridItem} ${styles[theme]}`}>
-            <FontAwesomeIcon icon={faCss3} />
-            <p>Text</p>
-          </div>
-          <div className={`${styles.gridItem} ${styles[theme]}`}>
-            <FontAwesomeIcon icon={faHtml5} />
-            <p>Text</p>
-          </div>
-          <div className={`${styles.gridItem} ${styles[theme]}`}>
-            <FontAwesomeIcon icon={faAws} />
-            <p>Text</p>
+          <div className={styles.btmContainer}>
+            <div className={styles.pContainer}>
+              <p className={theme}>
+                As a former audio engineer with a passion for technology, I am now pursuing a career
+                transition into the world of development. Over the past year, I have dedicated
+                myself to acquiring the necessary skills and knowledge to one day excel in this
+                field.
+              </p>
+              <p className={theme}>
+                I recently completed my studies in full-stack software engineering at La Fosse
+                Academy, where I had the opportunity to collaborate within small teams, employing
+                agile methodologies to create fully functional applications. This experience allowed
+                me to develop a solid foundation in a range of technologies including HTML, CSS,
+                JavaScript, object-oriented programming (OOP), REST API, Node.js, React, and SQL.
+              </p>
+              <p className={theme}>
+                Since finishing my studies, I have been actively expanding my skill set beyond the
+                curriculum, learning new technologies such as TypeScript and Next.js, further
+                enhancing my capabilities as a developer.
+              </p>
+            </div>
+            <div className={styles.techGrid}>
+              <div className={`${styles.gridItem} ${styles[theme]}`}>
+                <FontAwesomeIcon icon={faCss3} />
+                <p>Text</p>
+              </div>
+              <div className={`${styles.gridItem} ${styles[theme]}`}>
+                <FontAwesomeIcon icon={faHtml5} />
+                <p>Text</p>
+              </div>
+              <div className={`${styles.gridItem} ${styles[theme]}`}>
+                <FontAwesomeIcon icon={faAws} />
+                <p>Text</p>
+              </div>
+              <div className={`${styles.gridItem} ${styles[theme]}`}>
+                <FontAwesomeIcon icon={faReact} />
+                <p>Text</p>
+              </div>
+              <div className={`${styles.gridItem} ${styles[theme]}`}>
+                <FontAwesomeIcon icon={faSass} />
+                <p>Text</p>
+              </div>
+              <div className={`${styles.gridItem} ${styles[theme]}`}>
+                <FontAwesomeIcon icon={faNodeJs} />
+                <p>Text</p>
+              </div>
+              <div className={`${styles.gridItem} ${styles[theme]}`}>
+                <FontAwesomeIcon icon={faCss3} />
+                <p>Text</p>
+              </div>
+              <div className={`${styles.gridItem} ${styles[theme]}`}>
+                <FontAwesomeIcon icon={faHtml5} />
+                <p>Text</p>
+              </div>
+              <div className={`${styles.gridItem} ${styles[theme]}`}>
+                <FontAwesomeIcon icon={faAws} />
+                <p>Text</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
