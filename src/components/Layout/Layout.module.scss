@@ -21,6 +21,10 @@
     background-color: var(--bg-color-light);
   }
 
+  @media (min-width: 500px) {
+    padding: 0 2rem;
+  }
+
   @media (min-width: 768px) {
     padding: 0 3rem;
   }
