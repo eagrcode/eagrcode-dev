@@ -33,18 +33,17 @@ export default function About() {
               <p className={theme}>
                 As a former audio engineer with a passion for technology, I am now pursuing a career
                 transition into the world of development. Over the past year, I have dedicated
-                myself to acquiring the necessary skills and knowledge to one day excel in this
-                field.
+                myself to acquiring the necessary skills and knowledge to excel in this field.
               </p>
               <p className={theme}>
                 I recently completed my studies in full-stack software engineering at La Fosse
-                Academy, where I had the opportunity to collaborate within small teams, employing
-                agile methodologies to create fully functional applications. This experience allowed
-                me to develop a solid foundation in a range of technologies including HTML, CSS,
-                JavaScript, object-oriented programming (OOP), REST API, Node.js, React, and SQL.
+                Academy, where I collaborated within small teams, employing agile methodologies to
+                create fully functional applications. This experience allowed me to develop a solid
+                foundation in a range of technologies including HTML, CSS, JavaScript, OOP, REST
+                API, Node.js, React, and SQL.
               </p>
               <p className={theme}>
-                Since finishing my studies, I have been actively expanding my skill set beyond the
+                Since finishing my studies, I am actively expanding my skill set beyond the
                 curriculum, learning new technologies such as TypeScript and Next.js, further
                 enhancing my capabilities as a developer.
               </p>
