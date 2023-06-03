@@ -6,10 +6,10 @@ import styles from "./SuccessModal.module.scss";
 import { useTheme } from "@/context/ThemeProvider";
 
 type props = {
-  setIsSuccess: Dispatch<SetStateAction<boolean>>;
+  setIsSent: Dispatch<SetStateAction<boolean>>;
 };
 
-export default function SuccessModal({ setIsSuccess }: props) {
+export default function SuccessModal({ setIsSent }: props) {
   // initial state
   const { theme } = useTheme();
 
@@ -18,7 +18,7 @@ export default function SuccessModal({ setIsSuccess }: props) {
       <div className={`${styles.modalInner} ${styles[theme]}`}>
         <h1 className={theme}>Message Sent!</h1>
         <p className={theme}>I will get back to you!</p>
-        <button onClick={() => setIsSuccess(false)}>X</button>
+        <button onClick={() => setIsSent(false)}>X</button>
       </div>
     </div>
   );

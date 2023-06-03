@@ -5,7 +5,7 @@ import styles from "./Contact.module.scss";
 import Link from "next/link";
 
 // react
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 // components
 import ContactForm from "./ContactForm/ContactForm";
@@ -18,25 +18,11 @@ import { useContextProvider } from "@/context/ContextProvider";
 import IconContainer from "../IconContainer/IconContainer";
 import SuccessModal from "./SuccessModal/SuccessModal";
 
-// formspree
-import { useForm } from "@formspree/react";
-
 export default function Contact() {
   // initial state
   const { theme } = useTheme();
   const { isOpen } = useContextProvider();
-  const [state, handleSubmit] = useForm("myyaojra");
-  const [isSuccess, setIsSuccess] = useState(false);
-
-  useEffect(() => {
-    if (state.succeeded) {
-      showModal();
-    }
-  }, [state.succeeded]);
-
-  function showModal() {
-    setIsSuccess(true);
-  }
+  const [isSent, setIsSent] = useState(false);
 
   return (
     <section className={styles.contactSection}>
@@ -61,10 +47,10 @@ export default function Contact() {
             </p>
             <IconContainer />
           </div>
-          <ContactForm state={state} handleSubmit={handleSubmit} />
+          <ContactForm isSent={isSent} setIsSent={setIsSent} />
         </div>
       </div>
-      {isSuccess && <SuccessModal setIsSuccess={setIsSuccess} />}
+      {isSent && <SuccessModal setIsSent={setIsSent} />}
     </section>
   );
 }

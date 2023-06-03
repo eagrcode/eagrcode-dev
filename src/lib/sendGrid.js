@@ -4,11 +4,10 @@ export const sendEmail = async (to, subject, text) => {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   const msg = {
-    to: "elliot.robinson92@hotmail.com", // Change to your recipient
-    from: "elliot.robinson92@gmail.com", // Change to your verified sender
-    subject: "Sending with SendGrid is Fun",
-    text: "and easy to do anywhere, even with Node.js",
-    html: "<strong>and easy to do anywhere, even with Node.js</strong>",
+    to: "elliot.robinson92@hotmail.com",
+    from: "elliot.robinson92@gmail.com",
+    subject: "Eagrcode contact form",
+    text: `${text}`,
   };
 
   try {
