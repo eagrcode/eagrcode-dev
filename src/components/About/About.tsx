@@ -5,16 +5,34 @@ import styles from "./About.module.scss";
 import { useTheme } from "@/context/ThemeProvider";
 import { useContextProvider } from "@/context/ContextProvider";
 
+// next
+import Image from "next/image";
+
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiNodedotjs,
+  SiReact,
+  SiSass,
+  SiNextdotjs,
+  SiGit,
+  SiTypescript,
+} from "@icons-pack/react-simple-icons";
+
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAws,
   faCss3,
   faHtml5,
-  faNodeJs,
+  faNode,
   faReact,
   faSass,
+  faSquareJs,
 } from "@fortawesome/free-brands-svg-icons";
+
+import Nextjs from "@/assets/icons/nextjs.svg";
 
 export default function About() {
   // initial state
@@ -50,39 +68,39 @@ export default function About() {
             </div>
             <div className={styles.techGrid}>
               <div className={`${styles.gridItem} ${styles[theme]}`}>
-                <FontAwesomeIcon icon={faCss3} />
-                <p>Text</p>
+                <SiHtml5 size={40} />
+                <p>HTML5</p>
               </div>
               <div className={`${styles.gridItem} ${styles[theme]}`}>
-                <FontAwesomeIcon icon={faHtml5} />
-                <p>Text</p>
+                <SiCss3 size={40} />
+                <p>CSS3</p>
               </div>
               <div className={`${styles.gridItem} ${styles[theme]}`}>
-                <FontAwesomeIcon icon={faAws} />
-                <p>Text</p>
+                <SiJavascript size={40} />
+                <p>JavaScript</p>
               </div>
               <div className={`${styles.gridItem} ${styles[theme]}`}>
-                <FontAwesomeIcon icon={faReact} />
-                <p>Text</p>
+                <SiNodedotjs size={40} />
+                <p>Node.js</p>
               </div>
               <div className={`${styles.gridItem} ${styles[theme]}`}>
-                <FontAwesomeIcon icon={faSass} />
-                <p>Text</p>
+                <SiReact size={40} />
+                <p>React</p>
               </div>
               <div className={`${styles.gridItem} ${styles[theme]}`}>
-                <FontAwesomeIcon icon={faNodeJs} />
-                <p>Text</p>
+                <SiSass size={40} />
+                <p>Sass</p>
               </div>
               <div className={`${styles.gridItem} ${styles[theme]}`}>
-                <FontAwesomeIcon icon={faCss3} />
-                <p>Text</p>
+                <SiNextdotjs size={40} />
+                <p>Next.js</p>
               </div>
               <div className={`${styles.gridItem} ${styles[theme]}`}>
-                <FontAwesomeIcon icon={faHtml5} />
-                <p>Text</p>
+                <SiTypescript size={40} />
+                <p>TypeScript</p>
               </div>
               <div className={`${styles.gridItem} ${styles[theme]}`}>
-                <FontAwesomeIcon icon={faAws} />
+                <SiGit size={40} />
                 <p>Text</p>
               </div>
             </div>

@@ -51,6 +51,8 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   width: 100%;
+
+  justify-content: space-between;
 }
 
 .gridItem {
@@ -58,7 +60,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 2rem !important;
 
   &.dark {
     color: var(--accent-color-dark);
@@ -66,10 +67,6 @@
 
   &.light {
     color: var(--accent-color-light);
-  }
-
-  @media (min-width: 758px) {
-    font-size: 2.5rem !important;
   }
 
   p {
