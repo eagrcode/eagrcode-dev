@@ -1,8 +1,9 @@
 .contactSection {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .contactWrapper {
@@ -38,6 +39,10 @@
   flex-direction: column;
   gap: 1rem;
   width: 100%;
+
+  @media (min-width: 768px) {
+    max-width: 50%;
+  }
 }
 
 .emailLink {

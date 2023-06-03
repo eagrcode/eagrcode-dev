@@ -1,29 +1,85 @@
 // styles
 import styles from "./ContactForm.module.scss";
 
+// react
+import { RefObject, useRef, useState } from "react";
+
 // context
 import { useTheme } from "@/context/ThemeProvider";
-
-// formspree
-import { useForm, ValidationError } from "@formspree/react";
+import { FormEventHandler } from "react";
 
 // react spinners
 import PulseLoader from "react-spinners/PulseLoader";
 
-export default function ContactForm() {
+type FormError = {
+  email: string;
+  message: string;
+};
+
+type Props = {
+  state: {
+    result: any;
+    submitting: boolean;
+    succeeded: boolean;
+    errors: FormError[];
+  };
+  handleSubmit: FormEventHandler<HTMLFormElement>;
+};
+
+// const msgDetails = {
+//   firstName: "",
+//   lastName: "",
+//   emailAddress: "",
+//   message: "",
+// };
+
+export default function ContactForm({ state }: Props) {
   // initial state
   const { theme } = useTheme();
-  const [state, handleSubmit] = useForm("myyaojra");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [emailAddress, setEmailAddress] = useState("");
+  const [message, setMessage] = useState("");
 
-  if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
-  }
+  // const [formData, setFormData] = useState(msgDetails);
+
+  // // element refs
+  // const formRef: RefObject<HTMLFormElement> = useRef<HTMLFormElement>(null);
+
+  // // clear form data on successful submission
+  // if (state.succeeded) {
+  //   formRef.current?.reset();
+  // }
+
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+
+    const res = await fetch("/api/contact", {
+      body: JSON.stringify({
+        email: emailAddress,
+        firstName: firstName,
+        lastName: lastName,
+        message: message,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+
+    const { error } = await res.json();
+    if (error) {
+      console.log(error);
+      return;
+    }
+    console.log(firstName, lastName, emailAddress, message);
+  };
 
   return (
     <form
+      // ref={formRef}
       className={`${styles.form} ${styles[theme]}`}
       onSubmit={handleSubmit}
-      action="https://formspree.io/f/myyaojra"
       method="POST"
     >
       <div>
@@ -37,6 +93,8 @@ export default function ContactForm() {
           name="First name"
           required
           disabled={state.submitting}
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
         />
       </div>
       <div>
@@ -50,6 +108,8 @@ export default function ContactForm() {
           name="Last name"
           required
           disabled={state.submitting}
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
         />
       </div>
       <div>
@@ -64,8 +124,9 @@ export default function ContactForm() {
           required
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           disabled={state.submitting}
+          value={emailAddress}
+          onChange={(e) => setEmailAddress(e.target.value)}
         />
-        <ValidationError prefix="Email" field="email" errors={state.errors} />
       </div>
       <div>
         <label className={`${styles.label}${styles[theme]}`} htmlFor="message">
@@ -78,10 +139,10 @@ export default function ContactForm() {
           required
           minLength={10}
           disabled={state.submitting}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
         />
-        <ValidationError prefix="Message" field="message" errors={state.errors} />
       </div>
-
       <button
         className={`${styles.button} ${styles[theme]}`}
         type="submit"
