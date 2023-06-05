@@ -33,7 +33,8 @@ export default function Contact() {
         <div className={styles.contentContainer}>
           <div className={styles.textContainer}>
             <p className={theme}>
-              I'm currently open for work, if you wish to get in touch please use the form below.
+              If you are an employer, recruiter or perhaps you simply wish to know more about me,
+              then please get in touch using the form below.
             </p>
             <p className={theme}>
               Alternatively, you can contact me direct via{" "}
