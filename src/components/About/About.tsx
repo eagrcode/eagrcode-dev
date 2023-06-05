@@ -5,9 +5,6 @@ import styles from "./About.module.scss";
 import { useTheme } from "@/context/ThemeProvider";
 import { useContextProvider } from "@/context/ContextProvider";
 
-// next
-import Image from "next/image";
-
 import {
   SiHtml5,
   SiCss3,
@@ -32,8 +29,6 @@ import {
   faSquareJs,
 } from "@fortawesome/free-brands-svg-icons";
 
-import Nextjs from "@/assets/icons/nextjs.svg";
-
 export default function About() {
   // initial state
   const { theme } = useTheme();
@@ -41,8 +36,8 @@ export default function About() {
 
   return (
     <section className={styles.aboutSection}>
-      <div className={isOpen ? `${styles.about} ${styles.isOpen}` : styles.about}>
-        <div className={styles.textContainer}>
+      <div className={styles.about}>
+        <div className={isOpen ? `${styles.textContainer} ${styles.isOpen}` : styles.textContainer}>
           <h2 id="scroll-to-about" className={theme}>
             About Me
           </h2>
@@ -101,7 +96,7 @@ export default function About() {
               </div>
               <div className={`${styles.gridItem} ${styles[theme]}`}>
                 <SiGit size={40} />
-                <p>Text</p>
+                <p>Git</p>
               </div>
             </div>
           </div>
