@@ -12,7 +12,7 @@ export default function ResumeBtn() {
   const { theme } = useTheme();
 
   return (
-    <Link className={styles.link} href="">
+    <Link className={styles.link} href="ELLIOT-ROBINSON-CV.pdf" target="_blank">
       <button className={`${styles.btn} ${styles[theme]}`}>Resume</button>
     </Link>
   );
