@@ -5,17 +5,11 @@ import styles from "./About.module.scss";
 import { useTheme } from "@/context/ThemeProvider";
 import { useContextProvider } from "@/context/ContextProvider";
 
-import {
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiNodedotjs,
-  SiReact,
-  SiSass,
-  SiNextdotjs,
-  SiGit,
-  SiTypescript,
-} from "@icons-pack/react-simple-icons";
+// next
+import Image from "next/image";
+
+// images
+import fpCert from "@/assets/images/futureproof-cert.png";
 
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -61,43 +55,8 @@ export default function About() {
                 enhancing my capabilities as a developer.
               </p>
             </div>
-            <div className={styles.techGrid}>
-              <div className={`${styles.gridItem} ${styles[theme]}`}>
-                <SiHtml5 size={40} />
-                <p>HTML5</p>
-              </div>
-              <div className={`${styles.gridItem} ${styles[theme]}`}>
-                <SiCss3 size={40} />
-                <p>CSS3</p>
-              </div>
-              <div className={`${styles.gridItem} ${styles[theme]}`}>
-                <SiJavascript size={40} />
-                <p>JavaScript</p>
-              </div>
-              <div className={`${styles.gridItem} ${styles[theme]}`}>
-                <SiNodedotjs size={40} />
-                <p>Node.js</p>
-              </div>
-              <div className={`${styles.gridItem} ${styles[theme]}`}>
-                <SiReact size={40} />
-                <p>React</p>
-              </div>
-              <div className={`${styles.gridItem} ${styles[theme]}`}>
-                <SiSass size={40} />
-                <p>Sass</p>
-              </div>
-              <div className={`${styles.gridItem} ${styles[theme]}`}>
-                <SiNextdotjs size={40} />
-                <p>Next.js</p>
-              </div>
-              <div className={`${styles.gridItem} ${styles[theme]}`}>
-                <SiTypescript size={40} />
-                <p>TypeScript</p>
-              </div>
-              <div className={`${styles.gridItem} ${styles[theme]}`}>
-                <SiGit size={40} />
-                <p>Git</p>
-              </div>
+            <div className={styles.img}>
+              <Image src={fpCert} alt="" style={{ height: "auto", width: "100%" }} />
             </div>
           </div>
         </div>
