@@ -77,6 +77,7 @@ export default function ProjectCard({ title, description, links, tags, images, a
         />
         {Object.keys(images).map((image, index) => (
           <button
+            aria-label={`image ${index + 1}`}
             key={index}
             onClick={() => updateIndex(index)}
             className={

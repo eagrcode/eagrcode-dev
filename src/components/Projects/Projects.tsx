@@ -25,6 +25,10 @@ export default function Projects() {
         <h2 id="scroll-to-projects" className={theme}>
           Projects
         </h2>
+        <p className={`${styles.p} ${theme}`}>
+          Explore my personal projects, showcasing my passion for development, skills, and some of
+          my favourite technologies.
+        </p>
         <div className={styles.projectGrid}>
           {projectsData.map((project, index) => (
             <React.Fragment key={index}>
