@@ -1,0 +1,39 @@
+.swiper {
+  position: relative;
+  display: flex;
+  box-shadow: hsla(250, 10%, 10%, 0.3) 0px 8px 24px;
+  border-radius: 2px;
+  overflow: hidden;
+
+  &.dark {
+    border: solid 5px hsla(260, 15%, 60%, 0.2);
+  }
+
+  &.light {
+    border: solid 5px hsla(260, 20%, 40%, 0.6);
+  }
+}
+
+.swiperInner {
+  display: flex;
+  align-items: center;
+
+  // overflow: auto;
+  // scroll-snap-type: x mandatory;
+  // overscroll-behavior-x: contain;
+
+  transition: all ease-out 0.5s;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .img {
+    width: 100%;
+    flex-shrink: 0;
+
+    img {
+      display: block;
+    }
+  }
+}

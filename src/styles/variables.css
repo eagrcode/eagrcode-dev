@@ -1,0 +1,24 @@
+:root {
+  --nav-height: 4rem;
+
+  /* COLOURS */
+  /* --accent-color: hsl(190, 100%, 70%); */
+
+  /* dark theme */
+  --background-color-dark: hsl(260, 50%, 12%);
+  --text-color-dark: hsl(260, 15%, 60%);
+  --header-color-dark: hsl(250, 20%, 90%);
+  --nav-bg-color-dark: hsl(260, 50%, 7%);
+  --accent-color-dark: hsl(50, 30%, 70%);
+  /* --accent-color-dark: hsl(300, 100%, 75%); */
+  /* --accent-color-dark: hsl(290, 50%, 70%); */
+
+  /* light theme */
+  --bg-color-light: hsl(260, 10%, 90%);
+  --text-color-light: hsl(260, 20%, 40%);
+  --header-color-light: hsl(250, 20%, 20%);
+  --nav-bg-color-light: hsl(250, 20%, 80%);
+  /* --accent-color-light: hsl(260, 100%, 40%);
+  --accent-color-light: hsl(300, 100%, 75%); */
+  --accent-color-light: hsl(175, 50%, 30%);
+}

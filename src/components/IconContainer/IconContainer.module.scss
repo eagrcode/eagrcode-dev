@@ -1,0 +1,22 @@
+.iconContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon {
+  color: var(--text-color-dark);
+  font-size: 2rem;
+  cursor: pointer;
+
+  transition: all ease-out 0.1s;
+
+  &:hover {
+    &.dark {
+      color: var(--accent-color-dark);
+    }
+
+    &.light {
+      color: var(--accent-color-light);
+    }
+  }
+}
