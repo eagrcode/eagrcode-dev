@@ -2,6 +2,14 @@ import emdbThumb1 from "@/assets/images/emdb-thumbnail-1.png";
 import emdbThumb2 from "@/assets/images/emdb-thumbnail-2.png";
 import emdbThumb3 from "@/assets/images/emdb-thumbnail-3.png";
 
+import supataskThumb1 from "@/assets/images/supatask-thumbnail-1.png";
+import supataskThumb2 from "@/assets/images/supatask-thumbnail-2.png";
+import supataskThumb3 from "@/assets/images/supatask-thumbnail-3.png";
+
+import moongazerThumb1 from "@/assets/images/moongazer-thumbnail-1.png";
+import moongazerThumb2 from "@/assets/images/moongazer-thumbnail-2.png";
+import moongazerThumb3 from "@/assets/images/moongazer-thumbnail-3.png";
+
 export const projectsData = [
   {
     id: 0,
@@ -22,8 +30,8 @@ export const projectsData = [
 
     images: {
       1: emdbThumb1,
-      2: emdbThumb1,
-      3: emdbThumb1,
+      2: emdbThumb2,
+      3: emdbThumb3,
     },
     alt: "EMDB thumbnail",
   },
@@ -46,9 +54,9 @@ export const projectsData = [
     },
 
     images: {
-      1: emdbThumb1,
-      2: emdbThumb2,
-      3: emdbThumb3,
+      1: supataskThumb1,
+      2: supataskThumb2,
+      3: supataskThumb3,
     },
     alt: "supatask thumbnail",
   },
@@ -65,13 +73,12 @@ export const projectsData = [
       1: "React",
       2: "ViteJS",
       3: "Netlify",
-      4: "Contact form",
     },
 
     images: {
-      1: emdbThumb1,
-      2: emdbThumb2,
-      3: emdbThumb3,
+      1: moongazerThumb1,
+      2: moongazerThumb2,
+      3: moongazerThumb3,
     },
     alt: "moongazer ceremonies thumbnail",
   },
@@ -85,9 +92,9 @@ export const projectsData = [
       live: "https://eagrcode.dev",
     },
     tags: {
-      1: "Next.JS",
+      1: "Next.js",
       2: "Vercel",
-      3: "Contact form",
+      3: "TypeScript",
     },
 
     images: {
