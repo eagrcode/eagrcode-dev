@@ -38,21 +38,20 @@ export default function About() {
           <div className={styles.btmContainer}>
             <div className={styles.pContainer}>
               <p className={theme}>
-                As a former audio engineer with a passion for technology, I am now pursuing a career
-                transition into the world of development. Over the past year, I have dedicated
-                myself to acquiring the necessary skills and knowledge to excel in this field.
+                As a former audio engineer deeply fascinated by technology, I am now pursuing a
+                career transition into the world of development. Over the past year, I have
+                dedicated myself to acquiring the necessary skills and knowledge to excel in this
+                field.
               </p>
               <p className={theme}>
-                I recently completed my studies in full-stack software engineering at La Fosse
-                Academy, where I collaborated within small teams, employing agile methodologies to
-                create fully functional applications. This experience allowed me to develop a solid
-                foundation in a range of technologies including HTML, CSS, JavaScript, OOP, REST
-                API, Node.js, React, and SQL.
+                {`I recently completed my studies in full-stack software engineering at La Fosse
+                Academy (formally futureproof), where I collaborated within small teams, employing agile methodologies to
+                create fully functional applications.`}
               </p>
               <p className={theme}>
                 Since finishing my studies, I am actively expanding my skill set beyond the
-                curriculum, learning new technologies such as TypeScript and Next.js, further
-                enhancing my capabilities as a developer.
+                curriculum, learning new technologies to further enhance my capabilities as a
+                developer.
               </p>
             </div>
             <div className={styles.img}>
