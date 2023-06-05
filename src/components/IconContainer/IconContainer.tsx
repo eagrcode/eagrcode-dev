@@ -17,10 +17,14 @@ export default function IconContainer() {
 
   return (
     <div className={styles.iconContainer}>
-      <Link href="" aria-label="GitHub profile">
+      <Link href="https://github.com/eagrcode" aria-label="GitHub profile" target="_blank">
         <FontAwesomeIcon className={`${styles.icon} ${styles[theme]}`} icon={faGithub} />
       </Link>
-      <Link href="" aria-label="LinkedIn profile">
+      <Link
+        href="https://www.linkedin.com/in/elliot-robinson/"
+        aria-label="LinkedIn profile"
+        target="_blank"
+      >
         <FontAwesomeIcon className={`${styles.icon} ${styles[theme]}`} icon={faLinkedin} />
       </Link>
     </div>
