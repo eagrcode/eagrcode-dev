@@ -16,6 +16,9 @@ import { ThemeProvider } from "@/context/ThemeProvider";
 // fonts
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 
+// vercel analytics
+import { Analytics } from "@vercel/analytics/react";
+
 const ibm = IBM_Plex_Mono({
   subsets: ["latin"],
   weight: ["500"],
@@ -37,6 +40,7 @@ export default function App({ Component, pageProps }: AppProps) {
             }
           `}</style>
           <Component {...pageProps} />
+          <Analytics />
         </Layout>
       </ContextProvider>
     </ThemeProvider>
