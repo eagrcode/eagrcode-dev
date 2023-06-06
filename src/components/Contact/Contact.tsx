@@ -9,14 +9,12 @@ import { useState } from "react";
 
 // components
 import ContactForm from "./ContactForm/ContactForm";
+import IconContainer from "../IconContainer/IconContainer";
+import SuccessModal from "./SuccessModal/SuccessModal";
 
 // context
 import { useTheme } from "@/context/ThemeProvider";
 import { useContextProvider } from "@/context/ContextProvider";
-
-// components
-import IconContainer from "../IconContainer/IconContainer";
-import SuccessModal from "./SuccessModal/SuccessModal";
 
 export default function Contact() {
   // initial state
