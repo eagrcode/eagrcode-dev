@@ -1,14 +1,14 @@
-import emdbThumb1 from "@/assets/images/emdb-thumbnail-1.png";
-import emdbThumb2 from "@/assets/images/emdb-thumbnail-2.png";
-import emdbThumb3 from "@/assets/images/emdb-thumbnail-3.png";
+import emdbThumb1 from "@/assets/images/emdb-thumbnail-1.jpg";
+import emdbThumb2 from "@/assets/images/emdb-thumbnail-2.jpg";
+import emdbThumb3 from "@/assets/images/emdb-thumbnail-3.jpg";
 
-import supataskThumb1 from "@/assets/images/supatask-thumbnail-1.png";
-import supataskThumb2 from "@/assets/images/supatask-thumbnail-2.png";
-import supataskThumb3 from "@/assets/images/supatask-thumbnail-3.png";
+import supataskThumb1 from "@/assets/images/supatask-thumbnail-1.jpg";
+import supataskThumb2 from "@/assets/images/supatask-thumbnail-2.jpg";
+import supataskThumb3 from "@/assets/images/supatask-thumbnail-3.jpg";
 
-import moongazerThumb1 from "@/assets/images/moongazer-thumbnail-1.png";
-import moongazerThumb2 from "@/assets/images/moongazer-thumbnail-2.png";
-import moongazerThumb3 from "@/assets/images/moongazer-thumbnail-3.png";
+import moongazerThumb1 from "@/assets/images/moongazer-thumbnail-1.jpg";
+import moongazerThumb2 from "@/assets/images/moongazer-thumbnail-2.jpg";
+import moongazerThumb3 from "@/assets/images/moongazer-thumbnail-3.jpg";
 
 export const projectsData = [
   {
