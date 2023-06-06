@@ -14,7 +14,7 @@ import { ContextProvider } from "@/context/ContextProvider";
 import { ThemeProvider } from "@/context/ThemeProvider";
 
 // fonts
-import { IBM_Plex_Mono, IBM_Plex_Sans } from "@next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 
 const ibm = IBM_Plex_Mono({
   subsets: ["latin"],
