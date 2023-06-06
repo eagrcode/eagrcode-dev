@@ -3,6 +3,7 @@ import styles from "./Contact.module.scss";
 
 // next
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
 // react
 import { useState } from "react";
@@ -10,7 +11,7 @@ import { useState } from "react";
 // components
 import ContactForm from "./ContactForm/ContactForm";
 import IconContainer from "../IconContainer/IconContainer";
-import SuccessModal from "./SuccessModal/SuccessModal";
+const SuccessModal = dynamic(() => import("./SuccessModal/SuccessModal"));
 
 // context
 import { useTheme } from "@/context/ThemeProvider";
