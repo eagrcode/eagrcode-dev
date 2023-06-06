@@ -23,7 +23,7 @@ export default function Hamburger({ isOpen, setIsOpen }: props) {
   }
 
   return (
-    <button className={styles.button} onClick={handleClick}>
+    <button aria-label="Menu" className={styles.button} onClick={handleClick}>
       <div className={isOpen ? `${styles.hamburger} ${styles.active}` : styles.hamburger}>
         <div className={`${styles.bar} ${styles[theme]}`}></div>
         <div className={`${styles.bar} ${styles[theme]}`}></div>
