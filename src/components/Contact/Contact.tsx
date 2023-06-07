@@ -26,7 +26,7 @@ export default function Contact() {
   return (
     <section className={styles.contactSection}>
       <div className={isOpen ? `${styles.contactWrapper} ${styles.isOpen}` : styles.contactWrapper}>
-        <h2 id="scroll-to-contact" className={theme}>
+        <h2 id="contact" className={theme}>
           Contact Me
         </h2>
         <div className={styles.contentContainer}>

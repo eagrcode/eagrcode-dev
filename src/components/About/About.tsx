@@ -20,7 +20,7 @@ export default function About() {
     <section className={styles.aboutSection}>
       <div className={styles.about}>
         <div className={isOpen ? `${styles.textContainer} ${styles.isOpen}` : styles.textContainer}>
-          <h2 id="scroll-to-about" className={theme}>
+          <h2 id="about" className={theme}>
             About Me
           </h2>
           <div className={styles.btmContainer}>

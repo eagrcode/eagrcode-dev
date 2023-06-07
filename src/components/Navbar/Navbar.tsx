@@ -38,11 +38,7 @@ export default function Navbar() {
         >
           <ul className={styles.menu}>
             <li className={styles.item} onClick={() => setIsOpen(false)}>
-              <Link
-                className={`${styles.link} ${styles[theme]}`}
-                href="#scroll-to-about"
-                scroll={false}
-              >
+              <Link className={`${styles.link} ${styles[theme]}`} href="#about" scroll={false}>
                 About
               </Link>
             </li>
@@ -52,38 +48,17 @@ export default function Navbar() {
               </Link>
             </li>
             <li className={styles.item} onClick={() => setIsOpen(false)}>
-              <Link
-                className={`${styles.link} ${styles[theme]}`}
-                href="#scroll-to-projects"
-                scroll={false}
-              >
+              <Link className={`${styles.link} ${styles[theme]}`} href="#projects" scroll={false}>
                 Projects
               </Link>
             </li>
             <li className={styles.item} onClick={() => setIsOpen(false)}>
-              <Link
-                className={`${styles.link} ${styles[theme]}`}
-                href="#scroll-to-contact"
-                scroll={false}
-              >
+              <Link className={`${styles.link} ${styles[theme]}`} href="#contact" scroll={false}>
                 Contact
               </Link>
             </li>
           </ul>
-
           <ResumeBtn />
-          {/* <ul className={styles.socialMenu}>
-            <li>
-              <Link href="">
-                <FontAwesomeIcon className={`${styles.icon} ${styles[theme]}`} icon={faGithub} />
-              </Link>
-            </li>
-            <li>
-              <Link href="">
-                <FontAwesomeIcon className={`${styles.icon} ${styles[theme]}`} icon={faLinkedin} />
-              </Link>
-            </li>
-          </ul> */}
           <button title="Toggle theme" className={styles.toggle}>
             {theme === "dark" ? (
               <LuSunDim
