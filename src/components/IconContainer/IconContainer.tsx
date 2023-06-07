@@ -5,8 +5,7 @@ import styles from "./IconContainer.module.scss";
 import Link from "next/link";
 
 // icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 // context
 import { useTheme } from "@/context/ThemeProvider";
@@ -18,14 +17,14 @@ export default function IconContainer() {
   return (
     <div className={styles.iconContainer}>
       <Link href="https://github.com/eagrcode" aria-label="GitHub profile" target="_blank">
-        <FontAwesomeIcon className={`${styles.icon} ${styles[theme]}`} icon={faGithub} />
+        <FaGithub className={`${styles.icon} ${styles[theme]}`} size={30} />
       </Link>
       <Link
         href="https://www.linkedin.com/in/elliot-robinson/"
         aria-label="LinkedIn profile"
         target="_blank"
       >
-        <FontAwesomeIcon className={`${styles.icon} ${styles[theme]}`} icon={faLinkedin} />
+        <FaLinkedin className={`${styles.icon} ${styles[theme]}`} size={30} />
       </Link>
     </div>
   );

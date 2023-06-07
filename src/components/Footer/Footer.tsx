@@ -14,7 +14,12 @@ export default function Footer() {
   return (
     <footer className={`${styles.footer} ${styles[theme]}`}>
       <p className={theme}>Developed with Next.JS by Elliot Robinson</p>
-      <Link className={`${styles.link} ${styles[theme]}`} href="" title="View the repo">
+      <Link
+        className={`${styles.link} ${styles[theme]}`}
+        href="https://github.com/eagrcode/eagrcode-dev"
+        target="_blank"
+        title="View the repo"
+      >
         [ source code ]
       </Link>
     </footer>

@@ -13,7 +13,9 @@ export default function ResumeBtn() {
 
   return (
     <Link className={styles.link} href="ELLIOT-ROBINSON-CV.pdf" target="_blank">
-      <button className={`${styles.btn} ${styles[theme]}`}>Resume</button>
+      <button className={`${styles.btn} ${styles[theme]}`} title="Open pdf">
+        Resume
+      </button>
     </Link>
   );
 }

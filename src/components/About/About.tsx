@@ -27,7 +27,7 @@ export default function About() {
             <div className={styles.pContainer}>
               <p className={theme}>
                 As a former audio engineer deeply fascinated by technology, I am now pursuing a
-                career transition into the world of development. Over the past year, I have
+                career transition into the world of software development. Over the past year, I have
                 dedicated myself to acquiring the necessary skills and knowledge to excel in this
                 field.
               </p>
