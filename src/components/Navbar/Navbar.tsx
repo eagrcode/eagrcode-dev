@@ -13,9 +13,8 @@ import { useContextProvider } from "@/context/ContextProvider";
 import { useTheme } from "@/context/ThemeProvider";
 
 // icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { LuSunDim } from "react-icons/lu";
+import { SiMoonrepo } from "react-icons/si";
 
 export default function Navbar() {
   // initial state
@@ -86,11 +85,21 @@ export default function Navbar() {
             </li>
           </ul> */}
           <button title="Toggle theme" className={styles.toggle}>
-            <FontAwesomeIcon
-              className={`${styles.icon} ${styles[theme]}`}
-              icon={theme === "dark" ? faSun : faMoon}
-              onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}
-            />
+            {theme === "dark" ? (
+              <LuSunDim
+                className={`${styles.icon} ${styles[theme]}`}
+                onClickCapture={() => setTheme("light")}
+                size={30}
+                title="Toggle theme"
+              />
+            ) : (
+              <SiMoonrepo
+                className={`${styles.icon} ${styles[theme]}`}
+                onClickCapture={() => setTheme("dark")}
+                size={30}
+                title="Toggle theme"
+              />
+            )}
           </button>
         </div>
       </nav>

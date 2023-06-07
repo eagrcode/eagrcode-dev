@@ -1,7 +1,6 @@
 // styles
 import "@/styles/globals.scss";
 import "@/styles/variables.css";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 
 // next types
 import type { AppProps } from "next/app";

@@ -2,11 +2,11 @@
 import styles from "./ProjectCard.module.scss";
 
 // react
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
 // next
-import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import { StaticImageData } from "next/image";
 
 // context
 import { useTheme } from "@/context/ThemeProvider";
@@ -15,9 +15,7 @@ import { useTheme } from "@/context/ThemeProvider";
 import Swiper from "./Swiper/Swiper";
 
 // icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faChevronLeft, faChevronRight, faLink } from "@fortawesome/free-solid-svg-icons";
+import { FaGithub, FaChevronLeft, FaChevronRight, FaLink } from "react-icons/fa";
 
 // prop types
 type props = {
@@ -43,7 +41,6 @@ export default function ProjectCard({ title, description, links, tags, images, a
   // initial state
   const { theme } = useTheme();
   const [activeIndex, setActiveIndex] = useState(0);
-  const [mobActiveIndex, setMobActiveIndex] = useState(0);
 
   // left click
   function swipeLeft() {
@@ -70,9 +67,9 @@ export default function ProjectCard({ title, description, links, tags, images, a
     <div className={styles.project}>
       <Swiper images={images} alt={alt} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
       <div className={styles.swiperNavContainer}>
-        <FontAwesomeIcon
+        <FaChevronLeft
           className={`${styles.swiperNav} ${styles[theme]}`}
-          icon={faChevronLeft}
+          size={25}
           onClick={swipeLeft}
         />
         {Object.keys(images).map((image, index) => (
@@ -87,9 +84,9 @@ export default function ProjectCard({ title, description, links, tags, images, a
             }
           ></button>
         ))}
-        <FontAwesomeIcon
+        <FaChevronRight
           className={`${styles.swiperNav} ${styles[theme]}`}
-          icon={faChevronRight}
+          size={25}
           onClick={swipeRight}
         />
       </div>
@@ -97,10 +94,10 @@ export default function ProjectCard({ title, description, links, tags, images, a
         <h3 className={theme}>{title}</h3>
         <div className={styles.iconContainer}>
           <Link href={links.github} target="_blank" title="Source code">
-            <FontAwesomeIcon className={`${styles.icon} ${styles[theme]}`} icon={faGithub} />
+            <FaGithub className={`${styles.icon} ${styles[theme]}`} size={25} />
           </Link>
           <Link href={links.live} target="_blank" title="Live deployment">
-            <FontAwesomeIcon className={`${styles.icon} ${styles[theme]}`} icon={faLink} />
+            <FaLink className={`${styles.icon} ${styles[theme]}`} size={25} />
           </Link>
         </div>
       </div>
