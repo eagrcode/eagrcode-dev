@@ -83,25 +83,25 @@ export const projectsData = [
     alt: "moongazer ceremonies thumbnail",
   },
 
-  {
-    id: 3,
-    title: "Eagrcode",
-    description: "Personal portfolio for Front-end Developer Elliot Robinson.",
-    links: {
-      github: "https://github.com/eagrcode/EMDB",
-      live: "https://eagrcode.dev",
-    },
-    tags: {
-      1: "Next.js",
-      2: "Vercel",
-      3: "TypeScript",
-    },
+  // {
+  //   id: 3,
+  //   title: "Eagrcode",
+  //   description: "Personal portfolio for Front-end Developer Elliot Robinson.",
+  //   links: {
+  //     github: "https://github.com/eagrcode/EMDB",
+  //     live: "https://eagrcode.dev",
+  //   },
+  //   tags: {
+  //     1: "Next.js",
+  //     2: "Vercel",
+  //     3: "TypeScript",
+  //   },
 
-    images: {
-      1: emdbThumb1,
-      2: emdbThumb2,
-      3: emdbThumb3,
-    },
-    alt: "eagrcode.dev thumbnail",
-  },
+  //   images: {
+  //     1: emdbThumb1,
+  //     2: emdbThumb2,
+  //     3: emdbThumb3,
+  //   },
+  //   alt: "eagrcode.dev thumbnail",
+  // },
 ];

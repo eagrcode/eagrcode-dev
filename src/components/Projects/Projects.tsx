@@ -22,7 +22,7 @@ export default function Projects() {
       <div
         className={isOpen ? `${styles.projectsWrapper} ${styles.isOpen}` : styles.projectsWrapper}
       >
-        <h2 id="scroll-to-projects" className={theme}>
+        <h2 id="projects" className={theme}>
           Projects
         </h2>
         <p className={`${styles.p} ${theme}`}>
