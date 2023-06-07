@@ -9,19 +9,7 @@ import { useContextProvider } from "@/context/ContextProvider";
 import Image from "next/image";
 
 // images
-import fpCert from "@/assets/images/futureproof-cert.png";
-
-// icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAws,
-  faCss3,
-  faHtml5,
-  faNode,
-  faReact,
-  faSass,
-  faSquareJs,
-} from "@fortawesome/free-brands-svg-icons";
+import fpCert from "../../../public/assets/images/futureproof-cert.png";
 
 export default function About() {
   // initial state
@@ -55,7 +43,11 @@ export default function About() {
               </p>
             </div>
             <div className={styles.img}>
-              <Image src={fpCert} alt="" style={{ height: "auto", width: "100%" }} />
+              <Image
+                src={fpCert}
+                alt="futureproof certification nakamoto cohort"
+                style={{ height: "auto", width: "100%" }}
+              />
             </div>
           </div>
         </div>
