@@ -24,40 +24,39 @@ export default function TechGrid() {
   return (
     <div className={styles.techGrid}>
       <div className={`${styles.gridItem} ${styles[theme]}`}>
-        <Image src={Html5Icon} alt="" style={{ height: "35px", width: "35px" }} />
+        <Image src={Html5Icon} alt="HTML5" style={{ height: "35px", width: "35px" }} />
         <p>HTML5</p>
       </div>
       <div className={`${styles.gridItem} ${styles[theme]}`}>
-        <Image src={Css3Icon} alt="" style={{ height: "35px", width: "35px" }} />
-
+        <Image src={Css3Icon} alt="CSS3" style={{ height: "35px", width: "35px" }} />
         <p>CSS3</p>
       </div>
       <div className={`${styles.gridItem} ${styles[theme]}`}>
-        <Image src={JavaScriptIcon} alt="" style={{ height: "35px", width: "35px" }} />
+        <Image src={JavaScriptIcon} alt="JavaScript" style={{ height: "35px", width: "35px" }} />
         <p>JavaScript</p>
       </div>
       <div className={`${styles.gridItem} ${styles[theme]}`}>
-        <Image src={NodeIcon} alt="" style={{ height: "35px", width: "35px" }} />
+        <Image src={NodeIcon} alt="Node.js" style={{ height: "35px", width: "35px" }} />
         <p>Node.js</p>
       </div>
       <div className={`${styles.gridItem} ${styles[theme]}`}>
-        <Image src={ReactIcon} alt="" style={{ height: "35px", width: "35px" }} />
+        <Image src={ReactIcon} alt="React" style={{ height: "35px", width: "35px" }} />
         <p>React</p>
       </div>
       <div className={`${styles.gridItem} ${styles[theme]}`}>
-        <Image src={SassIcon} alt="" style={{ height: "35px", width: "35px" }} />
+        <Image src={SassIcon} alt="Sass" style={{ height: "35px", width: "35px" }} />
         <p>Sass</p>
       </div>
       <div className={`${styles.gridItem} ${styles[theme]}`}>
-        <Image src={NextIcon} alt="" style={{ height: "35px", width: "35px" }} />
+        <Image src={NextIcon} alt="Next.js" style={{ height: "35px", width: "35px" }} />
         <p>Next.js</p>
       </div>
       <div className={`${styles.gridItem} ${styles[theme]}`}>
-        <Image src={TypeScriptIcon} alt="" style={{ height: "35px", width: "35px" }} />
+        <Image src={TypeScriptIcon} alt="TypeScript" style={{ height: "35px", width: "35px" }} />
         <p>TypeScript</p>
       </div>
       <div className={`${styles.gridItem} ${styles[theme]}`}>
-        <Image src={GitIcon} alt="" style={{ height: "35px", width: "35px" }} />
+        <Image src={GitIcon} alt="Git" style={{ height: "35px", width: "35px" }} />
         <p>Git</p>
       </div>
     </div>
