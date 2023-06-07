@@ -22,6 +22,7 @@ export default function NavLayout({ children }: { children: React.ReactNode }) {
         onClick={() => setIsOpen(false)}
         className={`${styles.main} ${styles[theme]}`}
       >
+        {isOpen && <div className={styles.overlayBlur}></div>}
         {children}
       </main>
       <Footer />

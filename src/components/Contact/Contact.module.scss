@@ -13,10 +13,6 @@
   max-width: 500px;
   gap: 1rem;
 
-  &.isOpen {
-    filter: blur(8px);
-  }
-
   @media (min-width: 768px) {
     gap: 2rem;
     max-width: 100%;

@@ -11,10 +11,6 @@
   align-items: center;
   gap: 1rem;
 
-  &.isOpen {
-    filter: blur(8px);
-  }
-
   @media (min-width: 768px) {
     gap: 2rem;
   }
