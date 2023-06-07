@@ -16,7 +16,10 @@ export default function Home() {
     <>
       <Head>
         <title>Eagrcode</title>
-        <meta name="description" content="Portfolio of Web Developer Elliot Robinson" />
+        <meta
+          name="description"
+          content="Elliot Robinson - Front-End Developer with a passion for creating elegant and responsive Web Applications."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

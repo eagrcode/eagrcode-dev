@@ -48,6 +48,11 @@ export default function Navbar() {
               </Link>
             </li>
             <li className={styles.item} onClick={() => setIsOpen(false)}>
+              <Link className={`${styles.link} ${styles[theme]}`} href="#skills" scroll={false}>
+                Skills
+              </Link>
+            </li>
+            <li className={styles.item} onClick={() => setIsOpen(false)}>
               <Link
                 className={`${styles.link} ${styles[theme]}`}
                 href="#scroll-to-projects"

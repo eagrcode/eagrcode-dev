@@ -9,7 +9,7 @@ import { useTheme } from "@/context/ThemeProvider";
 import { useContextProvider } from "@/context/ContextProvider";
 
 // projects data
-import { projectsData } from "@/assets/data/projectsData";
+import { projectsData } from "@/utils/data/projectsData";
 import React from "react";
 
 export default function Projects() {
