@@ -12,7 +12,7 @@ export default function HeroBtn() {
   const { theme } = useTheme();
 
   return (
-    <Link className={styles.link} href="#scroll-to-projects" scroll={false}>
+    <Link className={styles.link} href="#projects" scroll={false}>
       <button className={`${styles.btn} ${styles[theme]}`}>Projects</button>
     </Link>
   );
