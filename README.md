@@ -60,12 +60,12 @@ This will start the development server, and you can access the portfolio by visi
 
 The project structure is organized as follows:
 
-public/ - Contains the public assets, such as HTML files and images.
-src/ - Contains the source code for the portfolio.
-components/ - Contains React components used to build the portfolio.
-styles/ - Contains shared CSS stylesheets for the portfolio.
-App.js - The main component that renders the portfolio.
-index.js - Entry point of the portfolio.
+- public/ - Contains the public assets, such as HTML files and images.
+- src/ - Contains the source code for the portfolio.
+- components/ - Contains React components used to build the portfolio.
+- styles/ - Contains shared CSS stylesheets for the portfolio.
+- App.js - The main component that renders the portfolio.
+- index.js - Entry point of the portfolio.
 
 ## Contact
 
