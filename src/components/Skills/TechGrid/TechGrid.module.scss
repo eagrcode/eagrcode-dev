@@ -14,13 +14,19 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
+  padding: 1rem;
+
+  border-radius: 15px;
+  box-shadow: hsla(250, 10%, 10%, 0.2) 1px 1px 20px;
 
   &.dark {
-    color: var(--accent-color-dark);
+    color: var(--text-color-dark);
+    background-color: var(--nav-bg-color-dark);
   }
 
   &.light {
-    color: var(--accent-color-light);
+    color: var(--text-color-light);
+    background-color: var(--nav-bg-color-light);
   }
 
   p {
