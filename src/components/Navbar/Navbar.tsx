@@ -25,7 +25,7 @@ export default function Navbar() {
     <header className={`${styles.header} ${styles[theme]}`}>
       <nav className={styles.nav}>
         <Link className={`${styles.logo} ${styles[theme]}`} href="/">
-          {"<eagrcode"}
+          {"<EAGRcode"}
           <span style={{ marginLeft: "8px" }}>{"/>"}</span>
         </Link>
         <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
