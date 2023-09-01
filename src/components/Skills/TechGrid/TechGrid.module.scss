@@ -1,11 +1,14 @@
 .techGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
   max-width: 450px;
-
   justify-content: space-between;
+
+  @media (min-width: 500px) {
+    gap: 2rem;
+  }
 }
 
 .gridItem {
@@ -13,8 +16,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5px;
-  padding: 1rem;
+  gap: 3px;
+  padding: 10px;
+  padding-top: 1rem;
 
   border-radius: 15px;
   box-shadow: hsla(250, 10%, 10%, 0.2) 1px 1px 20px;
@@ -31,6 +35,6 @@
 
   p {
     font-family: "IBM Plex Mono", monospace;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
