@@ -10,9 +10,36 @@ import moongazerThumb1 from "../../../public/assets/images/moongazer-thumbnail-1
 import moongazerThumb2 from "../../../public/assets/images/moongazer-thumbnail-2.jpg";
 import moongazerThumb3 from "../../../public/assets/images/moongazer-thumbnail-3.jpg";
 
+import fightxThumb1 from "../../../public/assets/images/fightx-thumbnail-1.png";
+import fightxThumb2 from "../../../public/assets/images/fightx-thumbnail-2.png";
+import fightxThumb3 from "../../../public/assets/images/fightx-thumbnail-3.png";
+
 export const projectsData = [
   {
     id: 0,
+    title: "FightX",
+    description:
+      "Social media style boxing workout application. View, like and save workouts posted by other users and run them with the built in interval timer, or create and post your own workouts for others to enjoy.",
+    links: {
+      github: "https://github.com/eagrcode/boxing-app",
+      live: "https://fight-x.vercel.app/",
+    },
+    tags: {
+      1: "Next.js",
+      2: "Supabase",
+      3: "TypeScript",
+      4: "Authentication",
+    },
+
+    images: {
+      1: fightxThumb1,
+      2: fightxThumb2,
+      3: fightxThumb3,
+    },
+    alt: "FightX thumbnail",
+  },
+  {
+    id: 1,
     title: "EMDB",
     description:
       "Movie database clone, allowing users to find information on a range of Movies and TV Shows.",
@@ -37,7 +64,7 @@ export const projectsData = [
   },
 
   {
-    id: 1,
+    id: 2,
     title: "Supatask",
     description:
       "Full-stack task application featuring user authentication and CRUD functionality. ",
@@ -62,7 +89,7 @@ export const projectsData = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: "MoonGazer Ceremonies",
     description: "Business page for Lincolnshire based Celebrant.",
     links: {
