@@ -27,7 +27,7 @@ export default function Hero() {
         {/* <p className={`${styles.hi} ${styles[theme]}`}>Hi, my name is</p> */}
         <h1 className={`${styles.h1} ${styles[theme]}`}>Elliot Robinson</h1>
         <p className={`${styles.p} ${theme}`}>
-          Front-End Developer, with a passion for creating elegant and responsive Web Applications
+          Software Developer, with a passion for creating elegant and responsive Web Applications
         </p>
         <HeroBtn />
         <IconContainer />
