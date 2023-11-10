@@ -17,12 +17,12 @@ import fightxThumb3 from "../../../public/assets/images/fightx-thumbnail-3.png";
 export const projectsData = [
   {
     id: 0,
-    title: "FightX",
+    title: "Beatdown",
     description:
       "Social media style boxing workout application. View, like and save workouts posted by other users and run them with the built in interval timer, or create and post your own workouts for others to enjoy.",
     links: {
       github: "https://github.com/eagrcode/boxing-app",
-      live: "https://fight-x.vercel.app/",
+      live: "https://thebeatdown.co.uk",
     },
     tags: {
       1: "Next.js",
