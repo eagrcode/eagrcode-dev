@@ -38,55 +38,55 @@ export const projectsData = [
     },
     alt: "FightX thumbnail",
   },
-  {
-    id: 1,
-    title: "EMDB",
-    description:
-      "Movie database clone, allowing users to find information on a range of Movies and TV Shows.",
-    links: {
-      github: "https://github.com/eagrcode/EMDB",
-      live: "https://emdb-eagrcode.netlify.app/",
-    },
-    tags: {
-      1: "React",
-      2: "TMDB api",
-      3: "Tanstack Query",
-      4: "ViteJS",
-      5: "Netlify",
-    },
+  // {
+  //   id: 1,
+  //   title: "EMDB",
+  //   description:
+  //     "Movie database clone, allowing users to find information on a range of Movies and TV Shows.",
+  //   links: {
+  //     github: "https://github.com/eagrcode/EMDB",
+  //     live: "https://emdb-eagrcode.netlify.app/",
+  //   },
+  //   tags: {
+  //     1: "React",
+  //     2: "TMDB api",
+  //     3: "Tanstack Query",
+  //     4: "ViteJS",
+  //     5: "Netlify",
+  //   },
 
-    images: {
-      1: emdbThumb1,
-      2: emdbThumb2,
-      3: emdbThumb3,
-    },
-    alt: "EMDB thumbnail",
-  },
+  //   images: {
+  //     1: emdbThumb1,
+  //     2: emdbThumb2,
+  //     3: emdbThumb3,
+  //   },
+  //   alt: "EMDB thumbnail",
+  // },
 
-  {
-    id: 2,
-    title: "Supatask",
-    description:
-      "Full-stack task application featuring user authentication and CRUD functionality. ",
-    links: {
-      github: "https://github.com/eagrcode/supatask",
-      live: "https://supatask.vercel.app/",
-    },
-    tags: {
-      1: "React",
-      2: "Supabase",
-      3: "ViteJS",
-      4: "Vercel",
-      5: "Auth",
-    },
+  // {
+  //   id: 2,
+  //   title: "Supatask",
+  //   description:
+  //     "Full-stack task application featuring user authentication and CRUD functionality. ",
+  //   links: {
+  //     github: "https://github.com/eagrcode/supatask",
+  //     live: "https://supatask.vercel.app/",
+  //   },
+  //   tags: {
+  //     1: "React",
+  //     2: "Supabase",
+  //     3: "ViteJS",
+  //     4: "Vercel",
+  //     5: "Auth",
+  //   },
 
-    images: {
-      1: supataskThumb1,
-      2: supataskThumb2,
-      3: supataskThumb3,
-    },
-    alt: "supatask thumbnail",
-  },
+  //   images: {
+  //     1: supataskThumb1,
+  //     2: supataskThumb2,
+  //     3: supataskThumb3,
+  //   },
+  //   alt: "supatask thumbnail",
+  // },
 
   {
     id: 3,
